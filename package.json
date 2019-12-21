@@ -1,0 +1,40 @@
+{
+  "name": "puppeteer-utilz",
+  "version": "1.0.0",
+  "description": "Utility functions for puppeteer",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib /**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --config jestconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angel-rs/puppeteer-utilz.git"
+  },
+  "keywords": [
+    "Puppeteer",
+    "Utility",
+    "Typescript",
+    "Javascript"
+  ],
+  "author": "Angel Rodríguez <angelmanuelrs@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/angel-rs/puppeteer-utilz/issues"
+  },
+  "homepage": "https://github.com/angel-rs/puppeteer-utilz#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.24",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
+    "typescript": "^3.7.4"
+  }
+}
