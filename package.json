@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-utilz",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utility functions for puppeteer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,8 +9,9 @@
   ],
   "scripts": {
     "build": "tsc",
+    "dev": "tsc-watch",
     "test": "jest --config jestconfig.json",
-    "prepare": "npm run build",
+    "prepare": "install-peers",
     "prepublishOnly": "npm test && npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
@@ -33,8 +34,32 @@
   "homepage": "https://github.com/angel-rs/puppeteer-utilz#readme",
   "devDependencies": {
     "@types/jest": "^24.0.24",
+    "@types/node": "^12.12.21",
+    "@types/puppeteer": "^2.0.0",
+    "install-peers-cli": "^2.2.0",
     "jest": "^24.9.0",
+    "puppeteer": "^2.0.0",
+    "puppeteer-extra": "^3.1.7",
     "ts-jest": "^24.2.0",
+    "tsc-watch": "^4.0.0",
     "typescript": "^3.7.4"
+  },
+  "peerDependencies": {
+    "puppeteer": "^2.0.0",
+    "puppeteer-extra": "^3.1.7"
+  },
+  "optionalDependencies": {
+    "puppeteer-extra-plugin-adblocker": "^2.11.1",
+    "puppeteer-extra-plugin-anonymize-ua": "^2.2.6",
+    "puppeteer-extra-plugin-block-resources": "^2.2.2",
+    "puppeteer-extra-plugin-click-and-wait": "^2.2.2",
+    "puppeteer-extra-plugin-devtools": "^2.2.6",
+    "puppeteer-extra-plugin-flash": "^2.2.2",
+    "puppeteer-extra-plugin-font-size": "^2.2.2",
+    "puppeteer-extra-plugin-recaptcha": "^3.1.8",
+    "puppeteer-extra-plugin-repl": "^2.2.2",
+    "puppeteer-extra-plugin-stealth": "^2.4.5",
+    "puppeteer-extra-plugin-user-data-dir": "^2.2.2",
+    "puppeteer-extra-plugin-user-preferences": "^2.2.2"
   }
 }
