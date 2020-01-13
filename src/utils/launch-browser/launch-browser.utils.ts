@@ -1,23 +1,50 @@
-import { noop } from '../';
+import puppeteer from 'puppeteer-extra';
+import {
+  noop,
+  waitForNavigation,
+} from '../';
 
-// TODO: finish function
+type Context = {
+  browser: any,
+  page: any,
+};
+type Dimensions = {
+  width: number,
+  height: number,
+};
+type Config = {
+  headless?: boolean,
+  args?: Array<string>
+  dimensions?: Dimensions,
+  plugins?: Array<any>,
+};
 
-const launchBrowser = noop;
+const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Context | null> => {
+  const loadConfig = { waitUntil: 'networkidle2' };
 
-// type Context = {
-//   browser: any,
-//   page: any,
-// };
-//
-// const launchBrowser = async (startUrl: string): Promise<Context | null> => {
-//   try {
-//     const session = new Puppeteer();
-//     const context: Context = await session.setup(startUrl);
-//     return context;
-//   } catch (error) {
-//     console.log(error);
-//     return null;
-//   }
-// }
+  const { plugins } = config;
+  if (plugins && plugins.length) {
+    plugins.forEach((plugin: any) => {
+      puppeteer.use(plugin());
+    });
+  }
+
+  try {
+    const browser: any = await puppeteer.launch(config).catch(noop);
+    const [page] = await browser.pages().catch(noop);
+
+    if (config && config.dimensions) {
+      await page.setViewport(config.dimensions).catch(noop);
+    }
+
+    await page.goto(startUrl, loadConfig).catch(noop);
+    await waitForNavigation(page, console.log, loadConfig);
+
+    return { browser, page };
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
 
 export { launchBrowser };

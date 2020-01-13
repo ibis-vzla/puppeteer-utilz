@@ -12,11 +12,11 @@ If you have any use cases which you think can be modular enough, please check [c
 
 `puppeteer-utilz` is hosted on [npm](https://www.npmjs.com/package/puppeteer-utilz), so you can install it with:
 
-```npm install puppeteer-utilz --save```
+`npm install puppeteer-utilz --save`
 
 And for the yarn fans:
 
-```yarn add puppeteer-utilz --save```
+`yarn add puppeteer-utilz --save`
 
 ## Roadmap 🗺
 
@@ -39,7 +39,7 @@ WIP, PRs welcome!
 
 ## WIP 🔨
 
-- `find-el-by-content` 
+- `find-el-by-content`
 - `get-frame`
 - `launch-browser`
 - `retry-operation`
