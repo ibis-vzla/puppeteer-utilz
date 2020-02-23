@@ -1,11 +1,11 @@
 {
   "name": "puppeteer-utilz",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Utility functions for puppeteer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
-    "lib /**/*"
+    "lib/**/*"
   ],
   "scripts": {
     "build": "tsc",
@@ -36,6 +36,7 @@
     "@types/jest": "^24.0.24",
     "@types/node": "^12.12.21",
     "@types/puppeteer": "^2.0.0",
+    "@types/signale": "^1.2.1",
     "install-peers-cli": "^2.2.0",
     "jest": "^24.9.0",
     "puppeteer": "^2.0.0",
@@ -61,5 +62,8 @@
     "puppeteer-extra-plugin-stealth": "^2.4.5",
     "puppeteer-extra-plugin-user-data-dir": "^2.2.2",
     "puppeteer-extra-plugin-user-preferences": "^2.2.2"
+  },
+  "dependencies": {
+    "signale": "^1.4.0"
   }
 }

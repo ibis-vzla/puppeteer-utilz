@@ -16,7 +16,8 @@
     "types": [
       "node",
       "jest"
-    ]
+    ],
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "src"
