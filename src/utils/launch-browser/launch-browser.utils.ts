@@ -19,8 +19,8 @@ type Config = {
   plugins?: Array<any>,
 };
 
-const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Context | null> => {
-  const loadConfig = { waitUntil: 'networkidle2' };
+const launchBrowser = async (startUrl: string, config: Config = {}, log: any): Promise<Context | null> => {
+  const loadConfig = { waitUntil: 'networkidle2', timeout: 30000 };
 
   const { plugins } = config;
   if (plugins && plugins.length) {
@@ -30,6 +30,7 @@ const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Con
   }
 
   try {
+    log.debug('Launching browser')
     const browser: any = await puppeteer.launch(config).catch(noop);
     const [page] = await browser.pages().catch(noop);
 
@@ -37,8 +38,10 @@ const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Con
       await page.setViewport(config.dimensions).catch(noop);
     }
 
+    log.debug(`Heading to ${startUrl}`)
     await page.goto(startUrl, loadConfig).catch(noop);
-    await waitForNavigation(page, console.log, loadConfig);
+    await waitForNavigation(page, log, loadConfig);
+    log.debug(`${startUrl} is ready`)
 
     return { browser, page };
   } catch (error) {
