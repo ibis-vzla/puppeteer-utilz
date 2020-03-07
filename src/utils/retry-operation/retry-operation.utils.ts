@@ -1,4 +1,3 @@
-import signale from 'signale';
 import { delay } from '../';
 
 // TODO: Improve typing
