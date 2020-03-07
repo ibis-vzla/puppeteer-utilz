@@ -1,5 +1,5 @@
 import { Page, Frame } from 'puppeteer';
-import chalk from 'chalk';
+const chalk = require('chalk')
 import { noop } from '../';
 
 const waitForNavigation = async (window: Page | Frame, log: any, config: any) => {

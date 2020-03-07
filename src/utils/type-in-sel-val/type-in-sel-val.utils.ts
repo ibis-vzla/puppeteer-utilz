@@ -1,5 +1,5 @@
 import { Page } from 'puppeteer';
-import chalk from 'chalk';
+const chalk = require('chalk')
 import { clickInSel } from '../';
 
 // TODO: refactor to parameters be a config object

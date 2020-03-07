@@ -1,6 +1,6 @@
 import { Page, Frame } from 'puppeteer';
 import signale from 'signale';
-import chalk from 'chalk';
+const chalk = require('chalk')
 import { retryOperation } from '../'
 
 const _clickInSel = async (page: Page | Frame, sel: string, log: any = signale) => {
