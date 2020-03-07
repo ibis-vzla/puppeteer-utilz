@@ -30,7 +30,7 @@ const clickInSel = async (page: Page | Frame, sel: string, log: any = signale) =
     } catch (error) {
       throw new Error(error)
     }
-  }, 3, log)
+  }, 3)
 }
 
 export { clickInSel };
