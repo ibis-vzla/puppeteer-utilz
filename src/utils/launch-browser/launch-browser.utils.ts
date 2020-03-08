@@ -4,6 +4,8 @@ import {
   waitForNavigation,
 } from '../';
 
+import log from '../../internals/logger';
+
 type Context = {
   browser: any,
   page: any,
@@ -19,7 +21,7 @@ type Config = {
   plugins?: Array<any>,
 };
 
-const launchBrowser = async (startUrl: string, config: Config = {}, log: any): Promise<Context | null> => {
+const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Context | null> => {
   const loadConfig = { waitUntil: 'networkidle2', timeout: 30000 };
 
   const { plugins } = config;

@@ -1,32 +1,32 @@
 import { Page, Frame } from 'puppeteer';
-import signale from 'signale';
-const chalk = require('chalk')
-import { retryOperation } from '../'
+const chalk = require('chalk');
 
-const _clickInSel = async (page: Page | Frame, sel: string, log: any = signale) => {
+import { retryOperation } from '../'
+import log from '../../internals/logger';
+
+const _clickInSel = async (page: Page | Frame, sel: string) => {
   try {
     log.debug(chalk`{gray Waiting for selector ${sel}}`);
     const el = await page.waitForSelector(sel).catch(log.debug);
-    log.debug(chalk`{gray Waiting for selector ${sel}} [ok]`);
+    log.debug(chalk`{gray Waiting for selector ${sel}}{green [ok]}`);
 
     if (el) {
       log.debug(chalk`Clicking selector {green ${sel}}`);
       await el.click();
-      log.debug(chalk`Clicking selector {green ${sel}} [ok]`);
+      log.debug(chalk`Clicking selector {green ${sel}}{green [ok]}`);
     } else {
-      throw new Error('element under selector is null');
+      throw new Error('Element under selector is null');
     }
   } catch (error) {
     log.debug(chalk`{red Cannot click in selector ${sel}}`);
-    log.debug(error);
     throw new Error(error);
   }
 }
 
-const clickInSel = async (page: Page | Frame, sel: string, log: any = signale) => {
+const clickInSel = async (page: Page | Frame, sel: string) => {
   await retryOperation(async () => {
     try {
-      await _clickInSel(page, sel, log)
+      await _clickInSel(page, sel)
     } catch (error) {
       throw new Error(error)
     }

@@ -1,7 +1,7 @@
 import { Page, Frame } from "puppeteer";
 
 // TODO: allow multiple `content` and `lookForIn` values
-// TODO: change order of parameters to be (window, tagName, lookForIn, content) 
+// TODO: change order of parameters to be (window, tagName, lookForIn, content)
 //       for readability
 
 type Window = Page | Frame;
@@ -26,9 +26,6 @@ const findElByContent = (window: Window, tagName: string, content: string, lookF
             _response = _tags[_i];
           }
         }
-        
-        console.log('found:');
-        console.log(_response);
 
         return _response;
       }, [params]);
