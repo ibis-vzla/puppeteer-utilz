@@ -8,12 +8,12 @@ const _clickInSel = async (page: Page | Frame, sel: string) => {
   try {
     log.debug(chalk`{gray Waiting for selector ${sel}}`);
     const el = await page.waitForSelector(sel).catch(log.debug);
-    log.debug(chalk`{gray Waiting for selector ${sel}}{green [ok]}`);
+    log.debug(chalk`{gray Waiting for selector ${sel}} {green [ok]}`);
 
     if (el) {
       log.debug(chalk`Clicking selector {green ${sel}}`);
       await el.click();
-      log.debug(chalk`Clicking selector {green ${sel}}{green [ok]}`);
+      log.debug(chalk`Clicking selector {green ${sel}} {green [ok]}`);
     } else {
       throw new Error('Element under selector is null');
     }

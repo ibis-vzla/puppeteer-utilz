@@ -12,7 +12,7 @@ const waitForNavigation = async (window: Page | Frame, config: any) => {
     .catch(
       process.env.NODE_ENV === 'production'
         ? noop
-        : console.error
+        : log.debug(chalk`{gray Waiting for navigation to finish} {red Page is not ready yet [x]}`)
     );
 }
 
