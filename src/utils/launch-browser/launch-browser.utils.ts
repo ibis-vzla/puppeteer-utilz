@@ -42,7 +42,7 @@ const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Con
 
     log.debug(`Heading to ${startUrl}`)
     await page.goto(startUrl, loadConfig).catch(noop);
-    await waitForNavigation(page, log, loadConfig);
+    await waitForNavigation(page, loadConfig);
     log.debug(`${startUrl} is ready`)
 
     return { browser, page };
