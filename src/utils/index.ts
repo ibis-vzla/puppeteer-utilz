@@ -8,6 +8,7 @@ export * from './noop/noop.utils';
 export * from './async-foreach/async-foreach.utils';
 export * from './retry-operation/retry-operation.utils';
 export * from './wait-for-frame/wait-for-frame.utils';
+export * from './wait-for-download/wait-for-download.utils';
 export * from './wait-for-navigation/wait-for-navigation.utils';
 export * from './wait-until-url/wait-until-url.utils';
 export * from './set-download-path/set-download-path.utils';
