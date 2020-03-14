@@ -1,6 +1,7 @@
 export * from './click-in-sel/click-in-sel.utils';
 export * from './launch-browser/launch-browser.utils';
 export * from './type-in-sel-val/type-in-sel-val.utils';
+export * from './block-resources/block-resources.utils';
 export * from './find-el-by-content/find-el-by-content.utils';
 export * from './get-frame/get-frame.utils';
 export * from './delay/delay.utils';

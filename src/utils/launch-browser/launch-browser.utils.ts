@@ -25,6 +25,7 @@ type Config = {
 
 const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Context | null> => {
   const { plugins, loadConfig, ...rest } = config;
+
   let browser: Browser;
   let page: Page;
   const _loadConfig = {
@@ -42,7 +43,8 @@ const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Con
   try {
     log.debug('Launching browser')
     browser = await puppeteer.launch(rest);
-    page = await browser.newPage();
+    const [firstPage] = await browser.pages();
+    page = firstPage;
   } catch (error) {
     console.error(error);
     return null;
