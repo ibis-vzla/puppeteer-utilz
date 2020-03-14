@@ -2,7 +2,7 @@ import { Page } from 'puppeteer';
 const chalk = require('chalk')
 
 import { clickInSel } from '../';
-import log from '../../internals/logger';
+import { log } from '../../internals/logger';
 
 // TODO: refactor to parameters be a config object
 // TODO: add better logging

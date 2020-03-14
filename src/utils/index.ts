@@ -4,6 +4,7 @@ export * from './type-in-sel-val/type-in-sel-val.utils';
 export * from './find-el-by-content/find-el-by-content.utils';
 export * from './get-frame/get-frame.utils';
 export * from './delay/delay.utils';
+export * from './disable-log/disable-log.utils';
 export * from './noop/noop.utils';
 export * from './async-foreach/async-foreach.utils';
 export * from './retry-operation/retry-operation.utils';

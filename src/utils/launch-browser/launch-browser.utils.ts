@@ -5,7 +5,7 @@ import {
   waitForNavigation,
 } from '../';
 
-import log from '../../internals/logger';
+import { log } from '../../internals/logger';
 
 type Context = {
   browser: any,

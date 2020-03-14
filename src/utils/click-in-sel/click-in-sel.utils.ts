@@ -2,7 +2,7 @@ import { Page, Frame } from 'puppeteer';
 const chalk = require('chalk');
 
 import { retryOperation } from '../'
-import log from '../../internals/logger';
+import { log } from '../../internals/logger';
 
 const _clickInSel = async (page: Page | Frame, sel: string) => {
   try {
