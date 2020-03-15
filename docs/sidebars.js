@@ -1,6 +1,10 @@
 module.exports = {
   someSidebar: {
-    'Getting Started': ['doc1', 'doc2', 'doc3'],
-    'Functions': ['delay'],
+    'Getting Started': [
+      'getting-started/installation'
+    ],
+    'Functions': [
+      'functions/delay'
+    ],
   },
 };
