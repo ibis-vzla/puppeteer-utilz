@@ -20,11 +20,14 @@ And for the yarn fans:
 
 ## Roadmap 🗺
 
-- Write documentation to all the utility functions
-- Add tests to all the utility functions
-- Add diagrams of examples
+```
+💡 These are the features we'll ve working on for v2
+```
 
-## Documentation
+if any questions/suggestions see this [issue](https://github.com/angel-rs/puppeteer-utilz/issues/2)
+
+
+<!-- ## Documentation
 
 WIP, PRs welcome!
 
@@ -35,16 +38,4 @@ WIP, PRs welcome!
 | noop | `noop` operation | ❌ | ✔️ |
 | delay | wait for `x` ms | ❌ | ❌ |
 | click-in-sel | click on a element that matches the passed selector | ❌ | ❌ |
-| type-in-sel-val | type on a element that matches the passed selector | ❌ | ❌ |
-
-## WIP 🔨
-
-- `find-el-by-content`
-- `get-frame`
-- `launch-browser`
-- `retry-operation`
-- `set-download-path`
-- `wait-for-navigation`
-- `fill-form`
-- `async-foreach`
-- `assert-image-content`
+| type-in-sel-val | type on a element that matches the passed selector | ❌ | ❌ | -->
