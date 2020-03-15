@@ -20,11 +20,7 @@ And for the yarn fans:
 
 ## Roadmap 🗺
 
-```
-💡 These are the features we'll ve working on for v2
-```
-
-if any questions/suggestions see this [issue](https://github.com/angel-rs/puppeteer-utilz/issues/2)
+💡 For what we'll be working on for v2 see this [issue](https://github.com/angel-rs/puppeteer-utilz/issues/2)
 
 
 <!-- ## Documentation
