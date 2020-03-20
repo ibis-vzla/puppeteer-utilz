@@ -11,4 +11,6 @@ const getFrame = (page: any, name: string) => {
   return frame;
 }
 
-export { getFrame };
+const refreshFrame = getFrame;
+
+export { getFrame, refreshFrame };
