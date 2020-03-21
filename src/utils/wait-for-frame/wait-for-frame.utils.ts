@@ -1,4 +1,6 @@
-const waitForFrame = (page: any, name: string) => new Promise((resolve) => {
+import { Frame } from 'puppeteer';
+
+const waitForFrame = (page: any, name: string): Promise<Frame> => new Promise((resolve) => {
   const checkFrame = () => {
     const frame = page.frames().find((f: any) => f.name() === name);
     if (frame) {
