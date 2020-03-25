@@ -68,6 +68,7 @@
     "puppeteer-extra-plugin-user-preferences": "^2.2.2"
   },
   "dependencies": {
+    "chalk": "^3.0.0",
     "puppeteer-extra": "^3.1.9",
     "signale": "^1.4.0"
   },
