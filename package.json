@@ -103,6 +103,14 @@
           "ts": "never"
         }
       ],
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "_clickInSel"
+          ]
+        }
+      ],
       "no-unused-vars": "off"
     },
     "settings": {
