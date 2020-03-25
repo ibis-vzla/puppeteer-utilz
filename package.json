@@ -103,6 +103,7 @@
           "ts": "never"
         }
       ],
+      "no-async-promise-executor": "off",
       "no-underscore-dangle": [
         "error",
         {
