@@ -92,7 +92,18 @@
     "plugins": [
       "@typescript-eslint"
     ],
-    "rules": {}
+    "rules": {},
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts"
+          ]
+        }
+      }
+    }
   },
   "jest": {
     "preset": "ts-jest"
