@@ -93,5 +93,8 @@
       "@typescript-eslint"
     ],
     "rules": {}
+  },
+  "jest": {
+    "preset": "ts-jest"
   }
 }
