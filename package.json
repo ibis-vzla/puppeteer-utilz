@@ -101,7 +101,8 @@
           "jsx": "never",
           "ts": "never"
         }
-      ]
+      ],
+      "no-unused-vars": "off"
     },
     "settings": {
       "import/resolver": {
