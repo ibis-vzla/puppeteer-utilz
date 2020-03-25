@@ -1,4 +1,4 @@
-![Library logo](logo.png)
+![Library logo](https://i.imgur.com/seCbKPs.png)
 
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/puppeteer-utilz?label=minified%20size)
 ![NPM](https://img.shields.io/npm/l/puppeteer-utilz)
@@ -30,12 +30,12 @@ WIP, PRs welcome!
 
 ## Available functions ♦️
 
-| name | description | documentation | tests |
-| ---- | ----------- | ------------- | ----- |
-| noop | `noop` operation | ❌ | ✔️ |
-| delay | wait for `x` ms | ❌ | ❌ |
-| click-in-sel | click on a element that matches the passed selector | ❌ | ❌ |
-| type-in-sel-val | type on a element that matches the passed selector | ❌ | ❌ |
+| name            | description                                         | documentation | tests |
+| --------------- | --------------------------------------------------- | ------------- | ----- |
+| noop            | `noop` operation                                    | ❌            | ✔️    |
+| delay           | wait for `x` ms                                     | ❌            | ❌    |
+| click-in-sel    | click on a element that matches the passed selector | ❌            | ❌    |
+| type-in-sel-val | type on a element that matches the passed selector  | ❌            | ❌    |
 
 ## WIP 🔨
 
