@@ -1,5 +1,7 @@
-import { log } from '../../internals/logger';
+import log from '../../internals/logger';
 
-export const disableLog = () => {
-  log.disable()
-}
+const disableLog = () => {
+  log.disable();
+};
+
+export default disableLog;
