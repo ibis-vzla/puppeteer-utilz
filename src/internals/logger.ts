@@ -1,6 +1,6 @@
-const { Signale } = require('signale');
+import { Signale } from 'signale';
 
-const signale = new Signale()
-const log = signale.scope('puppeteer-utilz')
+const signale = new Signale();
+const log = signale.scope('puppeteer-utilz');
 
-export { log }
+export default log;
