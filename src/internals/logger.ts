@@ -3,5 +3,5 @@ import {
 } from 'signale';
 
 export const logger = new Signale({
-  scope: 'puppeteer-utilz'
+  scope: 'puppeteer-utilz',
 });
