@@ -2,6 +2,8 @@ import {
   Signale,
 } from 'signale';
 
-export const logger = new Signale({
+const logger = new Signale({
   scope: 'puppeteer-utilz',
 });
+
+export default logger;
