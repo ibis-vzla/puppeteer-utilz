@@ -4463,6 +4463,14 @@ validate-npm-package-license@^3.0.1:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
 
+variable-ms@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/variable-ms/-/variable-ms-1.0.0.tgz#14df184ad09d42db0bd8c31241e8719b0b9c7b02"
+  integrity sha512-okVS0pqNjffv91pDrPz6oe7jx40WpzCFkKflmEXSRNqPb2Tb6DtAkzpq4SocYQ5MJprEuNBL+fs7Cj9oQTcoHQ==
+  dependencies:
+    "@types/ms" "^0.7.31"
+    ms "^2.1.2"
+
 verror@1.10.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/verror/-/verror-1.10.0.tgz#3a105ca17053af55d6e270c1f8288682e18da400"
