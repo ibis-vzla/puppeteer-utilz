@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc-watch",
-    "test": "jest --config jestconfig.json",
+    "test": "jest --coverage",
     "prepare": "install-peers",
     "prepublishOnly": "npm test && npm run lint",
     "version": "npm run format && git add -A src",
@@ -70,8 +70,5 @@
     "ms": "^2.1.2",
     "puppeteer-extra": "^3.1.9",
     "signale": "^1.4.0"
-  },
-  "jest": {
-    "preset": "ts-jest"
   }
 }
