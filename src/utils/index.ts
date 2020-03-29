@@ -4,6 +4,7 @@ export * from './delay';
 export * from './disable-logger';
 export * from './noop';
 export * from './retry';
+export * from './set-download-path';
 export * from './timeout';
 export * from './type';
 export * from './wait-for-download';
