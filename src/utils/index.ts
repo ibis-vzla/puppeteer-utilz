@@ -5,5 +5,6 @@ export * from './disable-logger';
 export * from './noop';
 export * from './retry';
 export * from './timeout';
+export * from './wait-for-frame';
 export * from './wait-for-navigation';
 export * from './wait-for-url';
