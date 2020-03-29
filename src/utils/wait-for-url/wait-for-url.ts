@@ -6,7 +6,7 @@ import {
   delay,
 } from '../../utils';
 
-const waitURL = (page: Page, expectedURL: string) => (
+const waitForURL = (page: Page, expectedURL: string) => (
   new Promise(async resolve => {
     let URLsAreDifferent = true;
 
@@ -24,4 +24,4 @@ const waitURL = (page: Page, expectedURL: string) => (
   })
 );
 
-export default waitURL;
+export default waitForURL;
