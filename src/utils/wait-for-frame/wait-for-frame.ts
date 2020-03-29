@@ -5,7 +5,7 @@ import {
 } from 'puppeteer';
 
 import {
-  findFrameByName,
+  findFrame,
   logger,
 } from '../../internals';
 
@@ -14,7 +14,7 @@ const waitForFrame = (page: Page, name: string): Promise<Frame> => (
     logger.debug(chalk`{gray Waiting for frame}`);
 
     const _checkForFrame = () => {
-      const frame = findFrameByName(page.frames(), name);
+      const frame = findFrame(page.frames(), name);
 
       if (frame) {
         logger.debug(chalk`{gray Waiting for frame} {green [ok]}`);
