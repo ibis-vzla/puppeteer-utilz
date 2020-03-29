@@ -5,6 +5,7 @@ export * from './delay';
 export * from './disable-logger';
 export * from './find-element';
 export * from './get-frame';
+export * from './launch-browser';
 export * from './noop';
 export * from './retry';
 export * from './set-download-path';
