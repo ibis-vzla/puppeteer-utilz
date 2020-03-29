@@ -3,6 +3,7 @@ export * from './block-resources';
 export * from './click';
 export * from './delay';
 export * from './disable-logger';
+export * from './find-element';
 export * from './get-frame';
 export * from './noop';
 export * from './retry';
