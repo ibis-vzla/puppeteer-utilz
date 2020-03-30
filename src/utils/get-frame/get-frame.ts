@@ -18,4 +18,5 @@ const getFrame = (page: Page, name: string) => {
 
 export {
   getFrame,
+  getFrame as refreshFrame,
 };
