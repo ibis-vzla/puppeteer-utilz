@@ -18,4 +18,6 @@ const waitForDownload = (path: string) => (
   })
 );
 
-export default waitForDownload;
+export {
+  waitForDownload,
+};

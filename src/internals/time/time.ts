@@ -8,4 +8,6 @@ const time = (time: number | string): number => {
   return time;
 };
 
-export default time;
+export {
+  time,
+};

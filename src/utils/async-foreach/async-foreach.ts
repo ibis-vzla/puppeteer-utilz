@@ -4,4 +4,6 @@ const asyncForeach = async (array: Array<any>, callback: any) => {
   }
 };
 
-export default asyncForeach;
+export {
+  asyncForeach,
+};

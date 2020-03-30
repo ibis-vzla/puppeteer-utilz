@@ -64,4 +64,6 @@ const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Con
   return { browser, page };
 }
 
-export default launchBrowser;
+export {
+  launchBrowser,
+};

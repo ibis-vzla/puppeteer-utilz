@@ -26,4 +26,6 @@ const blockResources = async (page: Page, resources: Resource[] = defaultResourc
   });
 };
 
-export default blockResources;
+export {
+  blockResources,
+};

@@ -6,4 +6,6 @@ const disableLogger = () => {
   logger.disable();
 };
 
-export default disableLogger;
+export {
+  disableLogger,
+};

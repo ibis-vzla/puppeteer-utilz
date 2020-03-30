@@ -33,4 +33,6 @@ const type = async (component: Frame | Page, options: TypeOptions) => {
   });
 };
 
-export default type;
+export {
+  type,
+};

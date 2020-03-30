@@ -24,4 +24,6 @@ const waitForURL = (page: Page, expectedURL: string) => (
   })
 );
 
-export default waitForURL;
+export {
+  waitForURL,
+};

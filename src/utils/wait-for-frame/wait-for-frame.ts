@@ -29,4 +29,6 @@ const waitForFrame = (page: Page, name: string): Promise<Frame> => (
   })
 );
 
-export default waitForFrame;
+export {
+  waitForFrame,
+};

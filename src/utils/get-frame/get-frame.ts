@@ -16,4 +16,6 @@ const getFrame = (page: Page, name: string) => {
   return frame;
 };
 
-export default getFrame;
+export {
+  getFrame,
+};

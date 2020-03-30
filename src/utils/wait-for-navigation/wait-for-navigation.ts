@@ -15,4 +15,6 @@ const waitForNavigation = async (component: Frame | Page, options: NavigationOpt
   await component.waitForNavigation(options);
 };
 
-export default waitForNavigation;
+export {
+  waitForNavigation,
+};

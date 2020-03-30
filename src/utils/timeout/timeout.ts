@@ -6,4 +6,6 @@ const timeout = (ms: number | string) => ({
   timeout: time(ms),
 });
 
-export default timeout;
+export {
+  timeout,
+};

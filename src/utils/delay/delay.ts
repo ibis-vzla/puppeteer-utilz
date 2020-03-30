@@ -8,4 +8,6 @@ const delay = (ms: number | string) => (
   })
 );
 
-export default delay;
+export {
+  delay,
+};

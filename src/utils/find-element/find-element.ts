@@ -40,4 +40,6 @@ const findElement = (window: Window, tagName: string, content: string, lookForIn
   })
 );
 
-export default findElement;
+export {
+  findElement,
+};

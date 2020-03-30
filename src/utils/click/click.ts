@@ -18,4 +18,6 @@ async function click(component: ElementHandle | Frame | Page, selector?: string)
   }
 }
 
-export default click;
+export {
+  click,
+};

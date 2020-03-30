@@ -6,4 +6,6 @@ const logger = new Signale({
   scope: 'puppeteer-utilz',
 });
 
-export default logger;
+export {
+  logger,
+};
