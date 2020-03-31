@@ -2,8 +2,6 @@ import {
   Page,
 } from 'puppeteer';
 
-type Resource = string;
-
 const defaultResources = [
   'stylesheet',
   'font',
