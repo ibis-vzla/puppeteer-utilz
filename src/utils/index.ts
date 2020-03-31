@@ -1,5 +1,6 @@
 export * from './async-foreach/async-foreach';
 export * from './block-resources/block-resources';
+export * from './capture/capture';
 export * from './click/click';
 export * from './delay/delay';
 export * from './disable-logger/disable-logger';
