@@ -2,8 +2,27 @@ import {
   ElementHandle,
 } from 'puppeteer';
 
+import {
+  retry,
+} from '../../utils';
+
 const onElement = async (component: ElementHandle) => {
   await component.click();
 };
 
-export default onElement;
+const onElementWithRetries = async (component: ElementHandle, retries: number) => {
+  await retry(async () => {
+    try {
+      await component.click();
+    } catch (error) {
+      throw new Error(error);
+    }
+  }, {
+    retries,
+  });
+};
+
+export {
+  onElement,
+  onElementWithRetries,
+};

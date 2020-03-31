@@ -4,19 +4,42 @@ import {
   Page,
 } from 'puppeteer';
 
-import onElement from './on-element';
-import onSelector from './on-selector';
+import {
+  onElement,
+  onElementWithRetries,
+} from './on-element';
+import {
+  onSelector,
+  onSelectorWithRetries,
+} from './on-selector';
 
-async function click(component: ElementHandle): Promise<any>;
-async function click(component: Frame | Page, selector: string): Promise<any>;
+type ClickOptions = {
+  component: ElementHandle | Frame | Page;
+  selector?: string;
+  retries?: number;
+};
 
-async function click(component: ElementHandle | Frame | Page, selector?: string) {
+const click = async (options: ClickOptions) => {
+  const {
+    component,
+    selector,
+    retries,
+  } = options;
+
   if ((component as ElementHandle).asElement()) {
-    onElement(component as ElementHandle);
+    if (retries) {
+      onElementWithRetries(component as ElementHandle, retries);
+    } else {
+      onElement(component as ElementHandle);
+    }
   } else {
-    onSelector(component as Frame | Page, selector as string);
+    if (retries) {
+      onSelectorWithRetries(component as Frame | Page, selector as string, retries);
+    } else {
+      onSelector(component as Frame | Page, selector as string);
+    }
   }
-}
+};
 
 export {
   click,

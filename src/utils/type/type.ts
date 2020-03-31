@@ -24,7 +24,10 @@ const type = async (component: Frame | Page, options: TypeOptions) => {
     name,
   } = options;
 
-  await click(component, selector);
+  await click({
+    component,
+    selector,
+  });
 
   logger.debug(chalk`Input name: {green ${name}} | Value: {green ${value}}`);
 

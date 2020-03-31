@@ -31,6 +31,10 @@ const _onSelector = async (component: Frame | Page, selector: string) => {
 };
 
 const onSelector = async (component: Frame | Page, selector: string) => {
+  await _onSelector(component, selector);
+};
+
+const onSelectorWithRetries = async (component: Frame | Page, selector: string, retries: number) => {
   await retry(async () => {
     try {
       await _onSelector(component, selector);
@@ -38,8 +42,11 @@ const onSelector = async (component: Frame | Page, selector: string) => {
       throw new Error(error);
     }
   }, {
-    retries: 3,
+    retries,
   });
 };
 
-export default onSelector;
+export {
+  onSelector,
+  onSelectorWithRetries,
+};
