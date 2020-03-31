@@ -4,13 +4,11 @@ import {
 } from 'puppeteer';
 
 // TODO: allow multiple `content` and `lookForIn` values
-// TODO: change order of parameters to be (window, tagName, lookForIn, content)
-//       for readability
 
 type Window = Page | Frame;
 type Attribute = string;
 
-const findElement = (window: Window, tagName: string, content: string, lookForIn: Attribute = 'textContent') => (
+const findElement = (window: Window, tagName: string, lookForIn: Attribute = 'textContent', content: string) => (
   new Promise(async (resolve, reject) => {
     const params = {
       tagName,
