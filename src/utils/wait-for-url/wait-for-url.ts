@@ -20,7 +20,7 @@ const waitForURL = (page: Page, expectedURL: string) => (
       await delay(500);
     }
 
-    resolve();
+    resolve(true);
   })
 );
 
