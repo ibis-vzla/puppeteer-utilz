@@ -9,6 +9,7 @@ describe('with the imported wait-for-url module', () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     page.goto('https://www.fb.com/');
+
     const areURLsSame = await waitForURL(page, 'https://www.facebook.com/');
     browser.close();
 
