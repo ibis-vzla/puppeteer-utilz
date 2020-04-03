@@ -26,7 +26,7 @@ const click = async (options: ClickOptions) => {
     retries,
   } = options;
 
-  if ((component as ElementHandle).asElement()) {
+  if (typeof (component as ElementHandle).asElement === 'function') {
     if (retries) {
       onElementWithRetries(component as ElementHandle, retries);
     } else {
