@@ -1,6 +1,11 @@
+import {
+  Browser,
+  Page,
+} from 'puppeteer';
+
 type Context = {
-  browser: any;
-  page: any;
+  browser: Browser;
+  page: Page;
 };
 
 type Dimensions = {
