@@ -7,7 +7,7 @@ describe('if a string is received', () => {
     expect.hasAssertions();
 
     expect(time('2 days')).toBe(172800000);
-  });
+  }, 30000);
 });
 
 describe('if a number is received', () => {
@@ -15,5 +15,5 @@ describe('if a number is received', () => {
     expect.hasAssertions();
 
     expect(time(60000)).toBe(60000);
-  });
+  }, 30000);
 });

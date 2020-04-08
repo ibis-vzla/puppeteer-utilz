@@ -12,6 +12,10 @@ import {
   noop,
   waitForNavigation,
 } from '../../utils';
+import {
+  Config,
+  Context,
+} from './index';
 
 const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Context | null> => {
   const {

@@ -33,7 +33,7 @@ const capture = async (page: Page, options: CaptureOptions) => {
   }, selector);
 
   if (!rect) {
-    throw Error(`Couldn't find element that matches selector: "${selector}"`);
+    return null;
   }
 
   return await page.screenshot({
