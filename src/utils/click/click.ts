@@ -20,7 +20,7 @@ type ClickOptions = {
 };
 
 const click = async (options: ClickOptions) => (
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     const {
       component,
       selector,
@@ -29,15 +29,19 @@ const click = async (options: ClickOptions) => (
 
     if (typeof (component as ElementHandle).asElement === 'function') {
       if (retries) {
-        onElementWithRetries(component as ElementHandle, retries);
+        onElementWithRetries(component as ElementHandle, retries)
+          .catch(reject);
       } else {
-        onElement(component as ElementHandle);
+        onElement(component as ElementHandle)
+          .catch(reject);
       }
     } else {
       if (retries) {
-        onSelectorWithRetries(component as Frame | Page, selector as string, retries);
+        onSelectorWithRetries(component as Frame | Page, selector as string, retries)
+          .catch(reject);
       } else {
-        onSelector(component as Frame | Page, selector as string);
+        onSelector(component as Frame | Page, selector as string)
+          .catch(reject);
       }
     }
 
