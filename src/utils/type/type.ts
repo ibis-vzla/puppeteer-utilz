@@ -18,7 +18,7 @@ type TypeOptions = {
 };
 
 const type = async (component: Frame | Page, options: TypeOptions) => (
-  new Promise(async resolve => {
+  new Promise(async (resolve, reject) => {
     const {
       selector,
       value,
@@ -34,7 +34,8 @@ const type = async (component: Frame | Page, options: TypeOptions) => (
 
     await component.type(selector, value, {
       delay: 111,
-    });
+    })
+      .catch(reject);
 
     resolve(value);
   })

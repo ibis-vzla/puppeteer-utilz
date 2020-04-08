@@ -2,7 +2,6 @@ import puppeteer from 'puppeteer';
 
 import {
   type,
-  waitForFrame,
 } from '../../../src';
 
 describe('with the imported type module', () => {
@@ -11,16 +10,42 @@ describe('with the imported type module', () => {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://www.banesconline.com/mantis/Website/Login.aspx');
+    await page.goto('https://validator.w3.org/', {
+      timeout: 60000,
+    });
 
-    const frame = await waitForFrame(page, 'ctl00_cp_frmAplicacion');
-    const typed = await type(frame, {
-      selector: 'input[id="txtUsuario"]',
+    const typed = await type(page, {
+      selector: 'input#uri',
       value: 'jest',
-      name: 'LOGIN INPUT',
+      name: 'uri',
     });
     await browser.close();
 
     expect(typed).toBe('jest');
-  }, 30000);
+  }, 60000);
+
+  it('must be possible: throw Error if selector not found', async () => {
+    expect.hasAssertions();
+
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto('https://validator.w3.org/', {
+      timeout: 60000,
+    });
+
+    let typed: any;
+    try {
+      typed = await type(page, {
+        selector: 'test',
+        value: 'jest',
+        name: 'test',
+      });
+    } catch (e) {
+      typed = e;
+    }
+
+    await browser.close();
+
+    expect(typed).not.toBe('jest');
+  }, 60000);
 });
