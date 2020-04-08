@@ -16,6 +16,20 @@ describe('with the imported get-frame module', () => {
     const frame = getFrame(page, frameName);
     await browser.close();
 
-    expect(frame.name()).toBe(frameName);
+    expect(frame?.name()).toBe(frameName);
+  }, 30000);
+
+  it('must be possible: return null if frame not found', async () => {
+    expect.hasAssertions();
+
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto('https://www.banesconline.com/mantis/Website/Login.aspx');
+
+    const frameName = 'test';
+    const frame = getFrame(page, frameName);
+    await browser.close();
+
+    expect(frame?.name()).toBe(undefined);
   }, 30000);
 });
