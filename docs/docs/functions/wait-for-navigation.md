@@ -2,11 +2,17 @@
 title: Wait for navigation
 ---
 
+### Description
+
+Wait for a URL.
+
+### Parameters
+
 - `component`: `Frame` | `Page`
 - `options`: `NavigationOptions`
   - `timeout`: `number`
 
-Wait for a URL.
+### Usage example
 
 ```ts
 import puppeteer from 'puppeteer';

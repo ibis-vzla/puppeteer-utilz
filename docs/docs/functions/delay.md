@@ -2,9 +2,15 @@
 title: Delay
 ---
 
-- `ms`: `number` | `string`
+### Description
 
 Generate a delay given a time.
+
+### Parameters
+
+- `ms`: `number` | `string`
+
+### Usage example
 
 ```ts
 import {

@@ -2,12 +2,18 @@
 title: Find element
 ---
 
+### Description
+
+Search for a specific item given its tag and content.
+
+### Parameters
+
 - `window`: `Frame` | `Page`
 - `tagName`: `string`
 - `lookForIn`: `string`
 - `content`: `string`
 
-Search for a specific item given its tag and content.
+### Usage example
 
 ```ts
 import puppeteer from 'puppeteer';

@@ -2,10 +2,16 @@
 title: Wait for frame
 ---
 
+### Description
+
+Wait for a frame to appear on a page.
+
+### Parameters
+
 - `page`: `Page`
 - `name`: `string`
 
-Wait for a frame to appear on a page.
+### Usage example
 
 ```ts
 import puppeteer from 'puppeteer';

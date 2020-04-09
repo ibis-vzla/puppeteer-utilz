@@ -2,9 +2,15 @@
 title: Launch browser
 ---
 
-- `startUrl`: `string`
+### Description
 
 Set a puppeteer environment.
+
+### Parameters
+
+- `startUrl`: `string`
+
+### Usage example
 
 ```ts
 import {

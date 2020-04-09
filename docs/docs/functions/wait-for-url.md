@@ -2,10 +2,16 @@
 title: Wait for URL
 ---
 
+### Description
+
+Wait for a URL that is redirecting.
+
+### Parameters
+
 - `page`: `Page`
 - `expectedURL`: `string`
 
-Wait for a URL that is redirecting.
+### Usage example
 
 ```ts
 import puppeteer from 'puppeteer';

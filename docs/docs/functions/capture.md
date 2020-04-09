@@ -2,13 +2,19 @@
 title: Capture
 ---
 
+### Description
+
+Take a screenshot of an item given the selector.
+
+### Parameters
+
 - `page`: `Page`
 - `options`: `CaptureOptions`
   - `padding`: `number`
   - `path`: `string`
   - `selector`: `string`
 
-Take a screenshot of an item given the selector.
+### Usage example
 
 ```ts
 import puppeteer from 'puppeteer';

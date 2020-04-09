@@ -2,12 +2,18 @@
 title: Set download path
 ---
 
+### Description
+
+Set a download path.
+
+### Parameters
+
 - `page`: `Page`
 - `behavior`: `Object`
   - `behavior`: `string`
   - `downloadPath`: `string`
 
-Set a download path.
+### Usage example
 
 ```ts
 import puppeteer from 'puppeteer';

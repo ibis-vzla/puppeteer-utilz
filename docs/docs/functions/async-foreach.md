@@ -2,10 +2,16 @@
 title: Async forEach
 ---
 
+### Description
+
+Execute a forEach for asynchronous functions.
+
+### Parameters
+
 - `array`: `Array<any>`
 - `callback`: `any`
 
-Execute a forEach for asynchronous functions.
+### Usage example
 
 ```ts
 import {

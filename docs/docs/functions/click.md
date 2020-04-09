@@ -2,12 +2,18 @@
 title: Click
 ---
 
+### Description
+
+Click on a given item a selector.
+
+### Parameters
+
 - `options`: `ClickOptions`
   - `component`: `ElementHandle` | `Frame` | `Page`
   - `selector`: `string`
   - `retries` ? : `number`
 
-Click on a given item a selector.
+### Usage example
 
 ```ts
 import puppeteer from 'puppeteer';

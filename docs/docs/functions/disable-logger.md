@@ -2,7 +2,11 @@
 title: Disable logger
 ---
 
+### Description
+
 Disable the logger.
+
+### Usage example
 
 ```ts
 import {

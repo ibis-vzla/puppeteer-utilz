@@ -2,7 +2,11 @@
 title: Noop
 ---
 
+### Description
+
 Does nothing.
+
+### Usage example
 
 ```ts
 import {

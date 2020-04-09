@@ -2,9 +2,15 @@
 title: Timeout
 ---
 
-- `ms`: `number` | `string`
+### Description
 
 Returns an object with the timeout property.
+
+### Parameters
+
+- `ms`: `number` | `string`
+
+### Usage example
 
 ```ts
 import {

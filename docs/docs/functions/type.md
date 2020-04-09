@@ -2,13 +2,19 @@
 title: Type
 ---
 
+### Description
+
+Type in a selector.
+
+### Parameters
+
 - `component`: `Frame` | `Page`
 - `options`: `TypeOptions`
   - `selector`: `string`
   - `value`: `string`
   - `name`: `string`
 
-Type in a selector.
+### Usage example
 
 ```ts
 import puppeteer from 'puppeteer';

@@ -2,9 +2,15 @@
 title: Wait for download
 ---
 
-- `path`: `string`
+### Description
 
 Wait for a download to finish.
+
+### Parameters
+
+- `path`: `string`
+
+### Usage example
 
 ```ts
 import puppeteer from 'puppeteer';

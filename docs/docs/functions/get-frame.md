@@ -2,10 +2,16 @@
 title: Get frame
 ---
 
+### Description
+
+Returns a frame from a page given its name.
+
+### Parameters
+
 - `page`: `Page`
 - `name`: `string`
 
-Returns a frame from a page given its name.
+### Usage example
 
 ```ts
 import puppeteer from 'puppeteer';
