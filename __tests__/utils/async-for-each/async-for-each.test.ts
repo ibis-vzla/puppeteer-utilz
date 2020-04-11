@@ -1,5 +1,5 @@
 import {
-  asyncForeach,
+  asyncForEach,
   delay,
 } from 'src/utils';
 
@@ -17,7 +17,7 @@ describe('with the imported async-foreach module', () => {
       expectedString += hrEnd.toString();
     };
 
-    await asyncForeach(array, callback);
+    await asyncForEach(array, callback);
 
     expect(expectedString).toBe('12112');
   }, 30000);

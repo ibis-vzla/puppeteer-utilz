@@ -1,4 +1,4 @@
-export * from './async-foreach/async-foreach';
+export * from './async-for-each/async-for-each';
 export * from './block-resources/block-resources';
 export * from './capture/capture';
 export * from './click/click';
