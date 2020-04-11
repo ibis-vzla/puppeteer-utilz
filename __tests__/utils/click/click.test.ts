@@ -6,7 +6,7 @@ import {
 } from 'src/utils';
 
 describe('with the imported click module', () => {
-  it('must be possible: click on a selector', async () => {
+  it('should be possible to click on element given a selector', async () => {
     expect.hasAssertions();
 
     const browser = await puppeteer.launch();
