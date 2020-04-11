@@ -23,7 +23,7 @@ describe('with the imported capture module', () => {
     expect(captured).not.toBe(null);
   }, 60000);
 
-  it('must be possible: return null if selector not found', async () => {
+  it(`should return null if selector doesn't match any element in the DOM`, async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
     await page.goto('https://www.banesconline.com/mantis/Website/Login.aspx');
