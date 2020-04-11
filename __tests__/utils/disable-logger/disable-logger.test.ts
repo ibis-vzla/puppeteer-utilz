@@ -1,9 +1,9 @@
 import {
   disableLogger,
-} from '../../../src';
+} from 'src/utils';
 import {
   logger,
-} from '../../../src/internals';
+} from 'src/internals';
 
 describe('with the imported disable-logger module', () => {
   it('must be possible: disable the logger', () => {

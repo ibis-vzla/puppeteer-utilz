@@ -6,10 +6,10 @@ import {
 
 import {
   logger,
-} from '../../internals';
+} from 'src/internals';
 import {
   click,
-} from '../../utils';
+} from 'src/utils';
 
 type TypeOptions = {
   selector: string;

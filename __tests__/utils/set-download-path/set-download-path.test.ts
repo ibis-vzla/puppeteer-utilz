@@ -5,7 +5,7 @@ import {
   delay,
   findElement,
   setDownloadPath,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported set-download-path module', () => {
   it('must be possible: set a download path', async () => {

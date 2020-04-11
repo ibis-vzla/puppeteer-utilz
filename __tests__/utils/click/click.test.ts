@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer';
 import {
   click,
   delay,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported click module', () => {
   it('must be possible: click on a selector', async () => {

@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 
 import {
   findFrame,
-} from '../../../src/internals';
+} from 'src/internals';
 
 describe('with the imported find-frame module', () => {
   it('must be possible: look for a frame within an array', async () => {

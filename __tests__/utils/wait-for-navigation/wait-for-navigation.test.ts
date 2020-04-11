@@ -3,7 +3,7 @@ import puppeteer from 'puppeteer';
 import {
   timeout,
   waitForNavigation,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported wait-for-navigation module', () => {
   it('must be possible: wait for a loaded web', async () => {

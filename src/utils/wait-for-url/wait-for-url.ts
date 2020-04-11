@@ -4,7 +4,7 @@ import {
 
 import {
   delay,
-} from '../../utils';
+} from 'src/utils';
 
 const waitForURL = (page: Page, expectedURL: string) => (
   new Promise(async resolve => {

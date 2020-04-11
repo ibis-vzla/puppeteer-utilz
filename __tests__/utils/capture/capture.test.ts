@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 
 import {
   capture,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported capture module', () => {
   it('must be possible: capture a selector', async () => {

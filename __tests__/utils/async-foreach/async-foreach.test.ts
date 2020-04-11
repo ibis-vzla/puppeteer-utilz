@@ -1,7 +1,7 @@
 import {
   asyncForeach,
   delay,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported async-foreach module', () => {
   it('must be possible to execute async functions', async () => {

@@ -6,10 +6,10 @@ import {
 
 import {
   logger,
-} from '../../internals';
+} from 'src/internals';
 import {
   retry,
-} from '../../utils';
+} from 'src/utils';
 
 const _onSelector = async (component: Frame | Page, selector: string) => {
   try {

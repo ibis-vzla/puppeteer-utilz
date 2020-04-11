@@ -4,7 +4,7 @@ import {
 
 import {
   retry,
-} from '../../utils';
+} from 'src/utils';
 
 const onElement = async (component: ElementHandle) => {
   await component.click();

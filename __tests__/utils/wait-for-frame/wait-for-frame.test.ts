@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 
 import {
   waitForFrame,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported wait-for-frame module', () => {
   it('must be possible: wait for a frame', async () => {

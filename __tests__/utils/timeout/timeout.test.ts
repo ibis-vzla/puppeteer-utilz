@@ -1,6 +1,6 @@
 import {
   timeout,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported timeout module, verify the returned object', () => {
   it('parameter in type number: 30000 must correspond to 30000', async () => {

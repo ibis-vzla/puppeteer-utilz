@@ -1,6 +1,6 @@
 import {
   logger,
-} from '../../../src/internals';
+} from 'src/internals';
 
 describe('with the imported logger module', () => {
   it('must be possible: send log messages', () => {

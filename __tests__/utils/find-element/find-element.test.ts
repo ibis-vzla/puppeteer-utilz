@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 
 import {
   findElement,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported find-element module', () => {
   it('must be possible: find an element by content', async () => {

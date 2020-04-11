@@ -1,6 +1,6 @@
 import {
   launchBrowser,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported launch-browser module', () => {
   it('must be possible: set an environment', async () => {

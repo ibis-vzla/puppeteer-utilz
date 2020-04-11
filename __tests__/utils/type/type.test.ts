@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 
 import {
   type,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported type module', () => {
   it('must be possible: type into input', async () => {

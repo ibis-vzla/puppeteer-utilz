@@ -2,7 +2,7 @@ import * as fs from 'fs';
 
 import {
   delay,
-} from '../../utils';
+} from 'src/utils';
 
 const waitForDownload = (path: string) => (
   new Promise(async resolve => {

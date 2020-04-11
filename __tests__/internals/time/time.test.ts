@@ -1,6 +1,6 @@
 import {
   time,
-} from '../../../src/internals';
+} from 'src/internals';
 
 describe('if a string is received', () => {
   it('convert string to number', () => {

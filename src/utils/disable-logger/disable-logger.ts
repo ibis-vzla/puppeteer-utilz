@@ -1,6 +1,6 @@
 import {
   logger,
-} from '../../internals';
+} from 'src/internals';
 
 const disableLogger = () => {
   logger.disable();

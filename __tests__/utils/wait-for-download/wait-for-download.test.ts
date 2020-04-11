@@ -5,7 +5,7 @@ import {
   findElement,
   setDownloadPath,
   waitForDownload,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported wait-for-download module', () => {
   it('must be possible: wait for a download to complete', async () => {

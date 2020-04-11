@@ -2,7 +2,7 @@ import puppeteer from 'puppeteer';
 
 import {
   getFrame,
-} from '../../../src';
+} from 'src/utils';
 
 describe('with the imported get-frame module', () => {
   it('must be possible: return a frame', async () => {

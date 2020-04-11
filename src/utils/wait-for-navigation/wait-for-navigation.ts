@@ -7,7 +7,7 @@ import {
 
 import {
   logger,
-} from '../../internals';
+} from 'src/internals';
 
 const waitForNavigation = async (component: Frame | Page, options: NavigationOptions) => {
   logger.debug(chalk`{gray Waiting for navigation to finish}`);
