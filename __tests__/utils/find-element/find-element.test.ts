@@ -18,7 +18,7 @@ describe('with the imported find-element module', () => {
     expect(element._remoteObject.subtype).not.toBe('null');
   }, 30000);
 
-  it('must be possible: throw null if element not found', async () => {
+  it(`should return null if element isn't found`, async () => {
     expect.hasAssertions();
 
     const browser = await puppeteer.launch();
