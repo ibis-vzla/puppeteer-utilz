@@ -17,7 +17,7 @@ type TypeOptions = {
   name: string;
 };
 
-const type = async (component: Frame | Page, options: TypeOptions) => {
+const type = async (window: Frame | Page, options: TypeOptions) => {
   const {
     selector,
     value,
@@ -25,13 +25,13 @@ const type = async (component: Frame | Page, options: TypeOptions) => {
   } = options;
 
   await click({
-    component,
+    component: window,
     selector,
   });
 
   logger.debug(chalk`Input name: {green ${name}} | Value: {green ${value}}`);
 
-  await component.type(selector, value, {
+  await window.type(selector, value, {
     delay: 111,
   });
 
