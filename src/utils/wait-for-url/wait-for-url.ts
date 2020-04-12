@@ -6,23 +6,21 @@ import {
   delay,
 } from 'src/utils';
 
-const waitForURL = (page: Page, expectedURL: string) => (
-  new Promise(async resolve => {
-    let URLsAreDifferent = true;
+const waitForURL = async (page: Page, expectedURL: string) => {
+  let URLsAreDifferent = true;
 
-    while (URLsAreDifferent) {
-      const currentURL = page.url();
+  while (URLsAreDifferent) {
+    const currentURL = page.url();
 
-      if (currentURL === expectedURL) {
-        URLsAreDifferent = false;
-      }
-
-      await delay(500);
+    if (currentURL === expectedURL) {
+      URLsAreDifferent = false;
     }
 
-    resolve(true);
-  })
-);
+    await delay(500);
+  }
+
+  return true;
+};
 
 export {
   waitForURL,

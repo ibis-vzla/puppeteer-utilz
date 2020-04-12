@@ -17,29 +17,26 @@ type TypeOptions = {
   name: string;
 };
 
-const type = async (component: Frame | Page, options: TypeOptions) => (
-  new Promise(async (resolve, reject) => {
-    const {
-      selector,
-      value,
-      name,
-    } = options;
+const type = async (component: Frame | Page, options: TypeOptions) => {
+  const {
+    selector,
+    value,
+    name,
+  } = options;
 
-    await click({
-      component,
-      selector,
-    });
+  await click({
+    component,
+    selector,
+  });
 
-    logger.debug(chalk`Input name: {green ${name}} | Value: {green ${value}}`);
+  logger.debug(chalk`Input name: {green ${name}} | Value: {green ${value}}`);
 
-    await component.type(selector, value, {
-      delay: 111,
-    })
-      .catch(reject);
+  await component.type(selector, value, {
+    delay: 111,
+  });
 
-    resolve(value);
-  })
-);
+  return value;
+};
 
 export {
   type,
