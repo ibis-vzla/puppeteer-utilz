@@ -13,7 +13,7 @@ describe('with the imported timeout module, verify the returned object', () => {
     });
   });
 
-  it('parameter in type string: \'30 seconds\' must correspond to 30000', async () => {
+  it(`parameter in type string: '30 seconds' must correspond to 30000`, async () => {
     expect.hasAssertions();
 
     const object = timeout('30 seconds');
@@ -23,7 +23,7 @@ describe('with the imported timeout module, verify the returned object', () => {
     });
   });
 
-  it('parameter in type number: 30000 mustn\'t correspond anything other except to 30000', async () => {
+  it(`parameter in type number: 30000 mustn't correspond anything other except to 30000`, async () => {
     expect.hasAssertions();
 
     const object = timeout(30000);
@@ -35,7 +35,7 @@ describe('with the imported timeout module, verify the returned object', () => {
     });
   });
 
-  it('parameter in type string: \'30 seconds\' mustn\'t correspond anything other except to 30000', async () => {
+  it(`parameter in type string: '30 seconds' mustn't correspond anything other except to 30000`, async () => {
     expect.hasAssertions();
 
     const object = timeout('30 seconds');
