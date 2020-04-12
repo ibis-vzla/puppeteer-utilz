@@ -1,5 +1,8 @@
 import chalk from 'chalk';
 import {
+  noTryAsync,
+} from 'no-try';
+import {
   Frame,
   Page,
 } from 'puppeteer';
@@ -11,33 +14,43 @@ import {
   retry,
 } from 'src/utils';
 
-const _onSelector = async (component: Frame | Page, selector: string) => {
-  try {
-    logger.debug(chalk`{gray Waiting for the selector: "${selector}"}`);
-    const element = await component.waitForSelector(selector);
-    logger.debug(chalk`{gray Waiting for the selector: "${selector}"} {green [ok]}`);
+const _getElement = async (component: Frame | Page, selector: string) => {
+  logger.debug(chalk`{gray Waiting for the selector: "${selector}"}`);
+  const {
+    result,
+  } = await noTryAsync(() => component.waitForSelector(selector));
 
-    if (element) {
-      logger.debug(chalk`Clicking the selector: {green "${selector}"}`);
-      await element.click();
-      logger.debug(chalk`Clicking the selector: {green "${selector}"} {green [ok]}`);
-    } else {
-      throw new Error(`Element specified by the selector: "${selector}", is not found in DOM`);
-    }
-  } catch (error) {
-    logger.debug(chalk`{red Cannot click on the selector: "${selector}"}`);
-    throw new Error(error);
-  }
+  return result;
 };
 
 const onSelector = async (component: Frame | Page, selector: string) => {
-  await _onSelector(component, selector);
+  const element = await _getElement(component, selector);
+
+  if (!element) {
+    logger.debug(`Element specified by the selector: "${selector}", is not found in DOM`);
+    return false;
+  } else {
+    logger.debug(chalk`{gray Waiting for the selector: "${selector}"} {green [ok]}`);
+  }
+
+  logger.debug(chalk`Clicking the selector: {green "${selector}"}`);
+  const {
+    error,
+  } = await noTryAsync(() => element.click());
+
+  if (error) {
+    logger.debug(chalk`{red Cannot click on the selector: "${selector}"}`);
+    return false;
+  } else {
+    logger.debug(chalk`Clicking the selector: {green "${selector}" [ok]}`);
+    return true;
+  }
 };
 
 const onSelectorWithRetries = async (component: Frame | Page, selector: string, retries: number) => {
   await retry(async () => {
     try {
-      await _onSelector(component, selector);
+      await onSelector(component, selector);
     } catch (error) {
       throw new Error(error);
     }

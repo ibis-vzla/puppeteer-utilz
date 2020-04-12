@@ -19,35 +19,27 @@ type ClickOptions = {
   retries?: number;
 };
 
-const click = async (options: ClickOptions) => (
-  new Promise((resolve, reject) => {
-    const {
-      component,
-      selector,
-      retries,
-    } = options;
+const click = async (options: ClickOptions) => {
+  const {
+    component,
+    selector,
+    retries,
+  } = options;
 
-    if (typeof (component as ElementHandle).asElement === 'function') {
-      if (retries) {
-        onElementWithRetries(component as ElementHandle, retries)
-          .catch(reject);
-      } else {
-        onElement(component as ElementHandle)
-          .catch(reject);
-      }
+  if (typeof (component as ElementHandle).asElement === 'function') {
+    if (retries) {
+      return await onElementWithRetries(component as ElementHandle, retries);
     } else {
-      if (retries) {
-        onSelectorWithRetries(component as Frame | Page, selector as string, retries)
-          .catch(reject);
-      } else {
-        onSelector(component as Frame | Page, selector as string)
-          .catch(reject);
-      }
+      return await onElement(component as ElementHandle);
     }
-
-    resolve(true);
-  })
-);
+  } else {
+    if (retries) {
+      return await onSelectorWithRetries(component as Frame | Page, selector as string, retries);
+    } else {
+      return await onSelector(component as Frame | Page, selector as string);
+    }
+  }
+};
 
 export {
   click,

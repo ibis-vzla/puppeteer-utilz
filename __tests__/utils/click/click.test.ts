@@ -37,6 +37,6 @@ describe('with the imported click module', () => {
     await delay(1000);
     await browser.close();
 
-    expect(isClicked).toBe(true);
-  }, 30000);
+    expect(isClicked).toBe(false);
+  }, 60000);
 });
