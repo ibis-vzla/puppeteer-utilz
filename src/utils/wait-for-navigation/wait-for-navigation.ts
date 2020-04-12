@@ -12,7 +12,13 @@ import {
 const waitForNavigation = async (component: Frame | Page, options: NavigationOptions) => {
   logger.debug(chalk`{gray Waiting for navigation to finish}`);
 
-  await component.waitForNavigation(options);
+  try {
+    await component.waitForNavigation(options);
+
+    return true;
+  } catch (error) {
+    return false;
+  }
 };
 
 export {

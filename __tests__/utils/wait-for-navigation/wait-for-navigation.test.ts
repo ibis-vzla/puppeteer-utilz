@@ -13,9 +13,7 @@ describe('with the imported wait-for-navigation module', () => {
     const page = await browser.newPage();
     page.goto('https://github.com/');
 
-    let navigationCompleted = false;
-    await waitForNavigation(page, timeout('1 minute'));
-    navigationCompleted = true;
+    const navigationCompleted = await waitForNavigation(page, timeout('1 minute'));
     await browser.close();
 
     expect(navigationCompleted).toBe(true);
