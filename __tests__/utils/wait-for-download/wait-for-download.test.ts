@@ -1,7 +1,6 @@
 import puppeteer from 'puppeteer';
 
 import {
-  delay,
   findElement,
   setDownloadPath,
   waitForDownload,
@@ -22,7 +21,6 @@ describe('with the imported wait-for-download module', () => {
     });
     const element: any = await findElement(page, 'a', 'textContent', '1 Mbit file');
     await element.click();
-    await delay('2 seconds');
 
     const filename = await waitForDownload('./download-path-test');
     await browser.close();
