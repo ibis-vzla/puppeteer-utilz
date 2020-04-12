@@ -6,7 +6,7 @@ import {
 } from 'src/internals';
 
 describe('with the imported disable-logger module', () => {
-  it('must be possible: disable the logger', () => {
+  it('should be able to disable the logger', () => {
     expect.hasAssertions();
 
     disableLogger();
