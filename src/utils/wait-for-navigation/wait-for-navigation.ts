@@ -9,11 +9,11 @@ import {
   logger,
 } from 'src/internals';
 
-const waitForNavigation = async (component: Frame | Page, options: NavigationOptions) => {
+const waitForNavigation = async (window: Frame | Page, options: NavigationOptions) => {
   logger.debug(chalk`{gray Waiting for navigation to finish}`);
 
   try {
-    await component.waitForNavigation(options);
+    await window.waitForNavigation(options);
 
     return true;
   } catch (error) {
