@@ -23,7 +23,7 @@ describe('with the imported click module', () => {
     expect(isClicked).toBe(true);
   }, 30000);
 
-  it('must be possible: throw false if selector not found', async () => {
+  it(`should return false if given selector isn't found`, async () => {
     expect.hasAssertions();
 
     const browser = await puppeteer.launch();
