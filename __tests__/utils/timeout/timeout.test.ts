@@ -4,8 +4,6 @@ import {
 
 describe('with the imported timeout module, verify the returned object', () => {
   it('parameter in type number: 30000 must correspond to 30000', async () => {
-    expect.hasAssertions();
-
     const object = timeout(30000);
 
     expect(object).toStrictEqual({
@@ -14,8 +12,6 @@ describe('with the imported timeout module, verify the returned object', () => {
   });
 
   it(`parameter in type string: '30 seconds' must correspond to 30000`, async () => {
-    expect.hasAssertions();
-
     const object = timeout('30 seconds');
 
     expect(object).toStrictEqual({
@@ -24,8 +20,6 @@ describe('with the imported timeout module, verify the returned object', () => {
   });
 
   it(`parameter in type number: 30000 mustn't correspond anything other except to 30000`, async () => {
-    expect.hasAssertions();
-
     const object = timeout(30000);
 
     expect(object).not.toStrictEqual({
@@ -36,8 +30,6 @@ describe('with the imported timeout module, verify the returned object', () => {
   });
 
   it(`parameter in type string: '30 seconds' mustn't correspond anything other except to 30000`, async () => {
-    expect.hasAssertions();
-
     const object = timeout('30 seconds');
 
     expect(object).not.toStrictEqual({
