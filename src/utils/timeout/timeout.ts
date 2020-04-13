@@ -1,6 +1,6 @@
 import {
   time,
-} from 'src/internals';
+} from '../../internals';
 
 const timeout = (ms: number | string) => ({
   timeout: time(ms),

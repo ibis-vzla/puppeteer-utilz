@@ -1,6 +1,6 @@
 import {
   time,
-} from 'src/internals';
+} from '../../internals';
 
 const delay = (ms: number | string) => (
   new Promise(resolve => {

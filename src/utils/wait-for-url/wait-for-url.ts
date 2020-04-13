@@ -4,10 +4,10 @@ import {
 
 import {
   time,
-} from 'src/internals';
+} from '../../internals';
 import {
   delay,
-} from 'src/utils';
+} from '../';
 
 const waitForURL = async (page: Page, expectedURL: string, timeout?: number | string) => {
   if (timeout) {

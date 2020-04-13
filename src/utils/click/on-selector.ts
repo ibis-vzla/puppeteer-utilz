@@ -9,10 +9,10 @@ import {
 
 import {
   logger,
-} from 'src/internals';
+} from '../../internals';
 import {
   retry,
-} from 'src/utils';
+} from '../';
 
 const _getElement = async (component: Frame | Page, selector: string) => {
   logger.debug(chalk`{gray Waiting for the selector: "${selector}"}`);

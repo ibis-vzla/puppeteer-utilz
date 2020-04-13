@@ -2,7 +2,7 @@ import fs from 'fs';
 
 import {
   time,
-} from 'src/internals';
+} from '../../internals';
 
 const waitForDownload = async (path: string, timeout?: number | string) => {
   if (timeout) {

@@ -7,11 +7,11 @@ import puppeteer from 'puppeteer-extra';
 import {
   logger,
   time,
-} from 'src/internals';
+} from '../../internals';
 import {
   noop,
   waitForNavigation,
-} from 'src/utils';
+} from '../';
 import {
   Config,
   Context,

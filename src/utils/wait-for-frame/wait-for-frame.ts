@@ -7,7 +7,7 @@ import {
 import {
   findFrame,
   logger,
-} from 'src/internals';
+} from '../../internals';
 
 const waitForFrame = (page: Page, name: string): Promise<Frame> => (
   new Promise(resolve => {

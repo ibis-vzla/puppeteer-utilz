@@ -4,7 +4,7 @@ import {
 
 import {
   findFrame,
-} from 'src/internals';
+} from '../../internals';
 
 const getFrame = (page: Page, name: string) => {
   const frame = findFrame(page.frames(), name);
