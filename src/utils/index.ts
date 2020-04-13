@@ -2,6 +2,7 @@ export * from './async-for-each/async-for-each';
 export * from './block-resources/block-resources';
 export * from './capture/capture';
 export * from './click/click';
+export * from './debug/debug';
 export * from './delay/delay';
 export * from './disable-logger/disable-logger';
 export * from './find-element/find-element';
