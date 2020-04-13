@@ -1,5 +1,5 @@
 ---
-title: Disable logger
+title: disableLogger
 ---
 
 ### Description

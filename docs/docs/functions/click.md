@@ -1,5 +1,5 @@
 ---
-title: Click
+title: click
 ---
 
 ### Description

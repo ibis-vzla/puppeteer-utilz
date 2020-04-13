@@ -1,5 +1,5 @@
 ---
-title: Async forEach
+title: asyncForEach
 ---
 
 ### Description
@@ -15,7 +15,7 @@ Execute a forEach for asynchronous functions.
 
 ```ts
 import {
-  asyncForeach,
+  asyncForEach,
 } from 'puppeteer-utilz';
 
 (async () => {

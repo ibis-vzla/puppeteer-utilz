@@ -1,10 +1,14 @@
 ---
-title: Wait for navigation
+title: waitForNavigation
 ---
 
 ### Description
 
-Wait for a URL.
+Wrapper of puppeteer waitForNavigation.
+
+This resolves when the page navigates to a new URL or reloads. It is useful for when you run code which will indirectly cause the page to navigate.
+
+[See the documentation](https://github.com/puppeteer/puppeteer/blob/v2.1.1/docs/api.md#pagewaitfornavigationoptions)
 
 ### Parameters
 

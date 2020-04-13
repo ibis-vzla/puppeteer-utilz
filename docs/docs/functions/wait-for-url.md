@@ -1,10 +1,10 @@
 ---
-title: Wait for URL
+title: waitForURL
 ---
 
 ### Description
 
-Wait for a URL that is redirecting.
+Waits for the given URL to settle in the browser.
 
 ### Parameters
 

@@ -1,5 +1,5 @@
 ---
-title: Wait for download
+title: waitForDownload
 ---
 
 ### Description

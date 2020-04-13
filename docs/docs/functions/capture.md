@@ -1,5 +1,5 @@
 ---
-title: Capture
+title: capture
 ---
 
 ### Description

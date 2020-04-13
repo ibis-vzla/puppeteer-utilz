@@ -1,5 +1,5 @@
 ---
-title: Wait for frame
+title: waitForFrame
 ---
 
 ### Description

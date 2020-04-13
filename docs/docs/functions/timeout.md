@@ -1,5 +1,5 @@
 ---
-title: Timeout
+title: timeout
 ---
 
 ### Description

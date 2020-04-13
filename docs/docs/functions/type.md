@@ -1,14 +1,14 @@
 ---
-title: Type
+title: type
 ---
 
 ### Description
 
-Type in a selector.
+Types a passed value in the first element that matches with the passed selector.
 
 ### Parameters
 
-- `component`: `Frame` | `Page`
+- `window`: `Frame` | `Page`
 - `options`: `TypeOptions`
   - `selector`: `string`
   - `value`: `string`

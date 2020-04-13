@@ -1,5 +1,5 @@
 ---
-title: Delay
+title: delay
 ---
 
 ### Description

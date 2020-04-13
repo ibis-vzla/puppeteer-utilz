@@ -1,5 +1,5 @@
 ---
-title: Launch browser
+title: launchBrowser
 ---
 
 ### Description

@@ -1,10 +1,10 @@
 ---
-title: Set download path
+title: setDownloadPath
 ---
 
 ### Description
 
-Set a download path.
+Sets a download path.
 
 ### Parameters
 

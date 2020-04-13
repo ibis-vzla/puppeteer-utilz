@@ -1,5 +1,5 @@
 ---
-title: Noop
+title: noop
 ---
 
 ### Description

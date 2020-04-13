@@ -1,3 +1,3 @@
 ---
-title: Block resources
+title: blockResources
 ---

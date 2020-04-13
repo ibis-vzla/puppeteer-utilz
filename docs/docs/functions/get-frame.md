@@ -1,5 +1,5 @@
 ---
-title: Get frame
+title: getFrame
 ---
 
 ### Description
