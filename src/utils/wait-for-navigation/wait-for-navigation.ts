@@ -1,5 +1,8 @@
 import chalk from 'chalk';
 import {
+  noTryAsync,
+} from 'no-try';
+import {
   Frame,
   NavigationOptions,
   Page,
@@ -12,12 +15,14 @@ import {
 const waitForNavigation = async (window: Frame | Page, options: NavigationOptions) => {
   logger.debug(chalk`{gray Waiting for navigation to finish}`);
 
-  try {
-    await window.waitForNavigation(options);
+  const {
+    result,
+  } = await noTryAsync(() => window.waitForNavigation(options));
 
-    return true;
-  } catch (error) {
+  if (!result) {
     return false;
+  } else {
+    return true;
   }
 };
 
