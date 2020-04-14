@@ -1,4 +1,4 @@
-![Library logo](logo.png)
+![Library logo](https://i.imgur.com/seCbKPs.png)
 
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/puppeteer-utilz?label=minified%20size)
 ![NPM](https://img.shields.io/npm/l/puppeteer-utilz)
@@ -21,7 +21,3 @@ And for the yarn fans:
 
 ## [Documentation](https://puppeteer-utilz.netlify.com/) 📃
 
-## Utility functions 🔷
-
-| name | description |
-| ---- | ----------- |
