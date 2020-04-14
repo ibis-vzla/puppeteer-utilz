@@ -15,11 +15,9 @@ Search for a specific item given its tag and content.
 
 ### Usage example
 
-```ts
+```js
 import puppeteer from 'puppeteer';
-import {
-  findElement,
-} from 'puppeteer-utilz';
+import { findElement } from 'puppeteer-utilz';
 
 (async () => {
   const browser = await puppeteer.launch();

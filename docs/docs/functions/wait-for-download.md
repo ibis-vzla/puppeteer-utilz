@@ -4,7 +4,8 @@ title: waitForDownload
 
 ### Description
 
-Wait for a download to finish.
+Waits for a download to finish. aka, the document is available in the system's fs.
+
 
 ### Parameters
 
@@ -12,7 +13,7 @@ Wait for a download to finish.
 
 ### Usage example
 
-```ts
+```js
 import puppeteer from 'puppeteer';
 import {
   delay,

@@ -4,7 +4,7 @@ title: click
 
 ### Description
 
-Click on a given item a selector.
+Click on a element given a selector.
 
 ### Parameters
 
@@ -15,11 +15,9 @@ Click on a given item a selector.
 
 ### Usage example
 
-```ts
+```js
 import puppeteer from 'puppeteer';
-import {
-  click,
-} from 'puppeteer-utilz';
+import { click } from 'puppeteer-utilz';
 
 (async () => {
   const browser = await puppeteer.launch();

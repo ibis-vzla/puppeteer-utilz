@@ -4,7 +4,7 @@ title: setDownloadPath
 
 ### Description
 
-Sets a download path.
+Sets a page download path destination.
 
 ### Parameters
 
@@ -15,13 +15,9 @@ Sets a download path.
 
 ### Usage example
 
-```ts
+```js
 import puppeteer from 'puppeteer';
-import {
-  delay,
-  findElement,
-  setDownloadPath,
-} from 'puppeteer-utilz';
+import { delay, findElement, setDownloadPath } from 'puppeteer-utilz';
 
 (async () => {
   const browser = await puppeteer.launch();

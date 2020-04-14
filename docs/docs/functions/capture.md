@@ -4,7 +4,7 @@ title: capture
 
 ### Description
 
-Take a screenshot of an item given the selector.
+Take a screenshot of an DOM donde given a selector.
 
 ### Parameters
 
@@ -16,11 +16,9 @@ Take a screenshot of an item given the selector.
 
 ### Usage example
 
-```ts
+```js
 import puppeteer from 'puppeteer';
-import {
-  capture,
-} from 'puppeteer-utilz';
+import { capture } from 'puppeteer-utilz';
 
 (async () => {
   const browser = await puppeteer.launch();

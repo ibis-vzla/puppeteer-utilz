@@ -4,26 +4,26 @@ title: asyncForEach
 
 ### Description
 
-Execute a forEach for asynchronous functions.
+The same as javascript's `Array.forEach` but functional & async.
 
 ### Parameters
 
 - `array`: `Array<any>`
-- `callback`: `any`
+- `callback`: `Async Function`
 
-### Usage example
+### Example
 
-```ts
-import {
-  asyncForEach,
-} from 'puppeteer-utilz';
+```js
+import { asyncForEach, delay } from 'puppeteer-utilz';
 
 (async () => {
-  const array = [...];
-  const callback = async (...) => {
-    ...
+  const array = [1, 2, 3];
+  const callback = async (number) => {
+    console.log(number)
+    await delay(1000)
   };
 
-  await asyncForeach(array, callback);
-})();
+  // prints 1, 2 & 3 with a 1s delay in between
+  await asyncForEach(array, callback);
+})()
 ```

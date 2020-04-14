@@ -13,11 +13,9 @@ Waits for the given URL to settle in the browser.
 
 ### Usage example
 
-```ts
+```js
 import puppeteer from 'puppeteer';
-import {
-  waitForURL,
-} from 'puppeteer-utilz';
+import { waitForURL } from 'puppeteer-utilz';
 
 (async () => {
   const browser = await puppeteer.launch();

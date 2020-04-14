@@ -12,10 +12,8 @@ Generate a delay given a time.
 
 ### Usage example
 
-```ts
-import {
-  delay,
-} from 'puppeteer-utilz';
+```js
+import { delay } from 'puppeteer-utilz';
 
 (async () => {
   const hrStart = process.hrtime();

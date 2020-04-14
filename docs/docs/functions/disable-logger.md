@@ -4,14 +4,12 @@ title: disableLogger
 
 ### Description
 
-Disable the logger.
+Disable the puppeteer-utilz logger.
 
 ### Usage example
 
-```ts
-import {
-  disableLogger,
-} from 'puppeteer-utilz';
+```js
+import { disableLogger } from 'puppeteer-utilz';
 
 (async () => {
   disableLogger();

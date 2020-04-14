@@ -4,14 +4,12 @@ title: noop
 
 ### Description
 
-Does nothing.
+Does nothing. 🤷🏻‍♂️
 
 ### Usage example
 
-```ts
-import {
-  noop,
-} from 'puppeteer-utilz';
+```js
+import { noop } from 'puppeteer-utilz';
 
 (() => {
   noop();

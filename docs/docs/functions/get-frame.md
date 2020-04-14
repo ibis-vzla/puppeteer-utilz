@@ -13,20 +13,18 @@ Returns a frame from a page given its name.
 
 ### Usage example
 
-```ts
+```js
 import puppeteer from 'puppeteer';
-import {
-  getFrame,
-} from 'puppeteer-utilz';
+import { getFrame } from 'puppeteer-utilz';
 
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://www.banesconline.com/mantis/Website/Login.aspx');
+  await page.goto('https://allwebco-templates.com/support/S_script_IFrame.htm');
 
-  const frameName = 'ctl00_cp_frmAplicacion';
-  const frame = getFrame(page, frameName);
-  console.log(frame.name()); // 'ctl00_cp_frmAplicacion'
+  const frameName = 'Framename';
+  const frame = await getFrame(page, frameName);
+  console.log(frame.name()); // 'Framename'
 
   await browser.close();
 })();

@@ -4,7 +4,7 @@ title: launchBrowser
 
 ### Description
 
-Set a puppeteer environment.
+Starts chrome browser, starts up a page & heads to the supplied url passed as `startUrl`.
 
 ### Parameters
 
@@ -12,15 +12,13 @@ Set a puppeteer environment.
 
 ### Usage example
 
-```ts
+```js
 import {
   launchBrowser,
 } from 'puppeteer-utilz';
 
 (async () => {
-  const context = await launchBrowser('https://validator.w3.org/');
-  const browser = context?.browser;
-  const page = context?.page;
+  const { browser, page } = await launchBrowser('https://validator.w3.org/');
 
   console.log(page.url()); // 'https://validator.w3.org/'
 

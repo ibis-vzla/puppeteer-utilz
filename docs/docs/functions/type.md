@@ -16,11 +16,9 @@ Types a passed value in the first element that matches with the passed selector.
 
 ### Usage example
 
-```ts
+```js
 import puppeteer from 'puppeteer';
-import {
-  type,
-} from 'puppeteer-utilz';
+import { type } from 'puppeteer-utilz';
 
 (async () => {
   const browser = await puppeteer.launch();

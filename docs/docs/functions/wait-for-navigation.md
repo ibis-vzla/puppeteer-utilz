@@ -18,12 +18,9 @@ This resolves when the page navigates to a new URL or reloads. It is useful for 
 
 ### Usage example
 
-```ts
+```js
 import puppeteer from 'puppeteer';
-import {
-  timeout,
-  waitForNavigation,
-} from 'puppeteer-utilz';
+import { timeout, waitForNavigation } from 'puppeteer-utilz';
 
 (async () => {
   const browser = await puppeteer.launch();
