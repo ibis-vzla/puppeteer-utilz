@@ -3,10 +3,11 @@
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/puppeteer-utilz?label=minified%20size)
 ![NPM](https://img.shields.io/npm/l/puppeteer-utilz)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2c4b92ca-4166-4bfe-a9d0-93c2c63145a6/deploy-status)](https://app.netlify.com/sites/puppeteer-utilz/deploys)
 
-`puppeteer-utilz` is a package with utility functions for [puppeteer](https://github.com/puppeteer/puppeteer) that provides a low and high abstraction tooling to standardize the way we build projects using puppeteer, making our code more **stable**, **clean**, and **efficient**.
+`puppeteer-utilz` is a package with utility functions for [puppeteer](https://github.com/puppeteer/puppeteer) that provides a low and high abstraction tooling to standardize the way we build projects using puppeteer, making our code more **stable**, **clean**, and **efficient**. From developers for developers [@ibis](https://github.com/ibis-vzla)
 
-If you have any use cases which you think can be modular enough, please check [contributing.md](./CONTRIBUTING.md) PRs are welcome!
+If you have any use cases which you think can be modular enough, please check [contributing.md](./CONTRIBUTING.md) PRs & issues are welcome!
 
 ## Getting started 🔧
 
@@ -18,20 +19,5 @@ And for the yarn fans:
 
 `yarn add puppeteer-utilz --save`
 
-## Roadmap 🗺
+## [Documentation](https://puppeteer-utilz.netlify.com/) 📃
 
-💡 For what we'll be working on for v2 see this [issue](https://github.com/angel-rs/puppeteer-utilz/issues/2)
-
-
-<!-- ## Documentation
-
-WIP, PRs welcome!
-
-## Available functions ♦️
-
-| name | description | documentation | tests |
-| ---- | ----------- | ------------- | ----- |
-| noop | `noop` operation | ❌ | ✔️ |
-| delay | wait for `x` ms | ❌ | ❌ |
-| click-in-sel | click on a element that matches the passed selector | ❌ | ❌ |
-| type-in-sel-val | type on a element that matches the passed selector | ❌ | ❌ | -->

@@ -1,17 +1,25 @@
 ---
-id: delay
-title: Delay
+title: delay
 ---
 
-You can write JSX and use React components within your Markdown thanks to [MDX](https://mdxjs.com/).
+### Description
 
-export const Highlight = ({children, color}) => ( <span style={{
-      backgroundColor: color,
-      borderRadius: '2px',
-      color: '#fff',
-      padding: '0.2rem',
-    }}> {children} </span> );
+Generate a delay given a time.
 
-<Highlight color="#25c2a0">Docusaurus green</Highlight> and <Highlight color="#1877F2">Facebook blue</Highlight> are my favorite colors.
+### Parameters
 
-I can write **Markdown** alongside my _JSX_!
+- `ms`: `number` | `string`
+
+### Usage example
+
+```js
+import { delay } from 'puppeteer-utilz';
+
+(async () => {
+  const hrStart = process.hrtime();
+  await delay('2 seconds');
+  const hrEnd = process.hrtime(hrStart)[0];
+
+  console.log(hrEnd); // 2
+})();
+```
