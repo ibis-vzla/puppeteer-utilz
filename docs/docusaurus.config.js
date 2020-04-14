@@ -1,7 +1,7 @@
 module.exports = {
   title: 'puppeteer-utilz',
   tagline: 'The utility functions library for puppeteer',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://puppeteer-utilz.netlify.com/',
   baseUrl: '/',
   favicon: 'img/logo.png',
   organizationName: 'Ibis-Vzla', // Usually your GitHub org/user name.
@@ -29,7 +29,7 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      copyright: `Copyright © ${new Date().getFullYear()} puppeteer-utilz, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} puppeteer-utilz, Inc. Built with Docusaurus. By the Ibis team.`,
     },
   },
   presets: [
