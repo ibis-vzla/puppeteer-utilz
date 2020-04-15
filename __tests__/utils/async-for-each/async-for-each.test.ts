@@ -17,5 +17,5 @@ describe('with the imported async-foreach module', () => {
     await asyncForEach(array, callback);
 
     expect(expectedString).toBe('12112');
-  }, 30000);
+  });
 });

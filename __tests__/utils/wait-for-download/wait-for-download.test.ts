@@ -1,10 +1,6 @@
 import puppeteer from 'puppeteer';
 
-import {
-  findElement,
-  setDownloadPath,
-  waitForDownload,
-} from 'src/utils';
+import { findElement, setDownloadPath, timeout, waitForDownload } from 'src/utils';
 
 describe('with the imported wait-for-download module', () => {
   it('must be possible: wait for a download to complete', async () => {
@@ -12,7 +8,7 @@ describe('with the imported wait-for-download module', () => {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('http://ovh.net/files/');
+    await page.goto('http://ovh.net/files/', timeout('10 minutes'));
 
     const downloadPath = './1-test-folder';
     await setDownloadPath(page, {
@@ -26,14 +22,14 @@ describe('with the imported wait-for-download module', () => {
     await browser.close();
 
     expect(filename).toBe('1Mb.dat');
-  }, 60000);
+  });
 
   it(`shouldn't be possible to download 10 Gbit file in 1 second`, async () => {
     expect.hasAssertions();
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('http://ovh.net/files/');
+    await page.goto('http://ovh.net/files/', timeout('10 minutes'));
 
     const downloadPath = './2-test-folder';
     await setDownloadPath(page, {
@@ -47,5 +43,5 @@ describe('with the imported wait-for-download module', () => {
     await browser.close();
 
     expect(filename).toBe(false);
-  }, 60000);
+  });
 });

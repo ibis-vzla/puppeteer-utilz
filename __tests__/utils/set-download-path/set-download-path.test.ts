@@ -1,11 +1,7 @@
 import fs from 'fs';
 import puppeteer from 'puppeteer';
 
-import {
-  delay,
-  findElement,
-  setDownloadPath,
-} from 'src/utils';
+import { delay, findElement, setDownloadPath, timeout } from 'src/utils';
 
 describe('with the imported set-download-path module', () => {
   it('must be possible: set a download path', async () => {
@@ -13,7 +9,7 @@ describe('with the imported set-download-path module', () => {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('http://ovh.net/files/');
+    await page.goto('http://ovh.net/files/', timeout('10 minutes'));
 
     const downloadPath = './download-path-test';
     await setDownloadPath(page, {
@@ -27,5 +23,5 @@ describe('with the imported set-download-path module', () => {
     await browser.close();
 
     expect(fs.existsSync(downloadPath)).toBe(true);
-  }, 30000);
+  });
 });

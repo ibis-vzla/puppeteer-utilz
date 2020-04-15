@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer';
 
-import { type } from 'src/utils';
+import { timeout, type } from 'src/utils';
 
 describe('with the imported type module', () => {
   it('must be possible: type into input', async () => {
@@ -8,9 +8,7 @@ describe('with the imported type module', () => {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://validator.w3.org/', {
-      timeout: 60000,
-    });
+    await page.goto('https://validator.w3.org/', timeout('10 minutes'));
 
     const typed = await type(page, {
       selector: 'input#uri',
@@ -20,16 +18,14 @@ describe('with the imported type module', () => {
     await browser.close();
 
     expect(typed).toBe('jest');
-  }, 60000);
+  });
 
   it('must be possible: throw Error if selector not found', async () => {
     expect.hasAssertions();
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://validator.w3.org/', {
-      timeout: 60000,
-    });
+    await page.goto('https://validator.w3.org/', timeout('10 minutes'));
 
     let typed: any;
     try {
@@ -45,5 +41,5 @@ describe('with the imported type module', () => {
     await browser.close();
 
     expect(typed).not.toBe('jest');
-  }, 60000);
+  });
 });

@@ -8,9 +8,9 @@ describe('with the imported launch-browser module', () => {
     const browser = context?.browser;
     const page = context?.page;
 
-    const url = page.url();
-    await browser.close();
+    const url = page?.url();
+    await browser?.close();
 
     expect(url).toBe('https://validator.w3.org/');
-  }, 60000);
+  });
 });
