@@ -3,7 +3,10 @@ const dimensions = {
   height: 920,
 };
 
-const { width, height } = dimensions;
+const {
+  width,
+  height,
+} = dimensions;
 
 const puppeteerConfig = {
   headless: false,
@@ -15,4 +18,7 @@ const puppeteerConfig = {
   ],
 };
 
-export { puppeteerConfig, dimensions };
+export {
+  dimensions,
+  puppeteerConfig,
+};
