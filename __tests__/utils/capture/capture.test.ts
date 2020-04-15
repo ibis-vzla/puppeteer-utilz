@@ -1,22 +1,20 @@
 import fs from 'fs';
 import puppeteer from 'puppeteer';
 
-import {
-  capture,
-} from 'src/utils';
+import { capture } from 'src/utils';
 
 describe('with the imported capture module', () => {
   it('should take a screenshot', async () => {
     expect.hasAssertions();
 
     const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto('https://www.banesconline.com/mantis/Website/Login.aspx');
+    const page = await browser.newPage
+    await page.goto('https://allwebco-templates.com/support/S_script_IFrame.htm');
 
     const captured = await capture(page, {
       padding: 16,
       path: './test.png',
-      selector: 'iframe[id="ctl00_cp_frmAplicacion"]',
+      selector: 'iframe[name="Framename"]',
     });
 
     await browser.close();
@@ -27,7 +25,7 @@ describe('with the imported capture module', () => {
   it(`should return null if selector doesn't match any element in the DOM`, async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://www.banesconline.com/mantis/Website/Login.aspx');
+    await page.goto('https://allwebco-templates.com/support/S_script_IFrame.htm');
 
     const captured = await capture(page, {
       padding: 16,
@@ -45,13 +43,13 @@ describe('with the imported capture module', () => {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://www.banesconline.com/mantis/Website/Login.aspx');
+    await page.goto('https://allwebco-templates.com/support/S_script_IFrame.htm');
 
     const path = './test.png';
     await capture(page, {
       padding: 16,
       path,
-      selector: 'iframe[id="ctl00_cp_frmAplicacion"]',
+      selector: 'iframe[name="Framename"]',
     });
 
     await browser.close();

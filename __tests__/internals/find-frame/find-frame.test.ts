@@ -10,10 +10,10 @@ describe('with the imported find-frame module', () => {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://www.banesconline.com/mantis/Website/Login.aspx');
+    await page.goto('https://allwebco-templates.com/support/S_script_IFrame.htm');
 
     const array = page.frames();
-    const frameName = 'ctl00_cp_frmAplicacion';
+    const frameName = 'Framename';
     const frame = findFrame(array, frameName);
     await browser.close();
 
@@ -25,7 +25,7 @@ describe('with the imported find-frame module', () => {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://www.banesconline.com/mantis/Website/Login.aspx');
+    await page.goto('https://allwebco-templates.com/support/S_script_IFrame.htm');
 
     const array = page.frames();
     const frameName = 'test';

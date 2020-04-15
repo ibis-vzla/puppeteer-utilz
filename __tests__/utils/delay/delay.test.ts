@@ -1,6 +1,4 @@
-import {
-  delay,
-} from 'src/utils';
+import { delay } from 'src/utils';
 
 describe('with the imported delay module, calculate the execution time', () => {
   it('parameter in type number: 100 must correspond to 100 milliseconds', async () => {

@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-utilz",
-  "version": "2.0.0rc-1",
+  "version": "2.0.0",
   "description": "Utility functions for puppeteer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,7 +10,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc-watch",
-    "test": "jest --coverage",
+    "test": "jest",
     "prepare": "install-peers",
     "prepublishOnly": "npm test && npm run lint",
     "version": "npm run format && git add -A src",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/angel-rs/puppeteer-utilz.git"
+    "url": "git+https://github.com/ibis-vzla/puppeteer-utilz.git"
   },
   "keywords": [
     "Puppeteer",
@@ -27,12 +27,12 @@
     "Typescript",
     "Javascript"
   ],
-  "author": "Angel Rodríguez <angelmanuelrs@gmail.com>",
+  "author": "Ibis Team <ibis.contacto@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/angel-rs/puppeteer-utilz/issues"
+    "url": "https://github.com/ibis-vzla/puppeteer-utilz/issues"
   },
-  "homepage": "https://github.com/angel-rs/puppeteer-utilz#readme",
+  "homepage": "https://github.com/ibis-vzla/puppeteer-utilz#readme",
   "devDependencies": {
     "@types/jest": "^24.0.24",
     "@types/node": "^12.12.21",

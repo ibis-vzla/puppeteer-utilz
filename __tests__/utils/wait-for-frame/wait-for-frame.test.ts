@@ -1,8 +1,6 @@
 import puppeteer from 'puppeteer';
 
-import {
-  waitForFrame,
-} from 'src/utils';
+import { waitForFrame } from 'src/utils';
 
 describe('with the imported wait-for-frame module', () => {
   it('must be possible: wait for a frame', async () => {
@@ -10,9 +8,9 @@ describe('with the imported wait-for-frame module', () => {
 
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
-    await page.goto('https://www.banesconline.com/mantis/Website/Login.aspx');
+    await page.goto('https://allwebco-templates.com/support/S_script_IFrame.htm');
 
-    const frameName = 'ctl00_cp_frmAplicacion';
+    const frameName = 'Framename';
     const frame = await waitForFrame(page, frameName);
     await browser.close();
 

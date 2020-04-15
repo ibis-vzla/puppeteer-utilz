@@ -1,7 +1,4 @@
-import {
-  asyncForEach,
-  delay,
-} from 'src/utils';
+import { asyncForEach, delay } from 'src/utils';
 
 describe('with the imported async-foreach module', () => {
   it('must be possible to execute async functions', async () => {

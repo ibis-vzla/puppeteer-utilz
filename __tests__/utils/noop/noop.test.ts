@@ -1,6 +1,4 @@
-import {
-  noop,
-} from 'src/utils';
+import { noop } from 'src/utils';
 
 describe('with the imported noop module', () => {
   it('call noop should do nothing', () => {

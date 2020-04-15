@@ -1,8 +1,6 @@
 import puppeteer from 'puppeteer';
 
-import {
-  waitForURL,
-} from 'src/utils';
+import { waitForURL } from 'src/utils';
 
 describe('with the imported wait-for-url module', () => {
   it('must be possible: wait for a redirect', async () => {
