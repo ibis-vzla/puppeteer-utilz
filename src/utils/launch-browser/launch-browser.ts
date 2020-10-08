@@ -40,6 +40,7 @@ const launchBrowser = async (startUrl: string, config: Config = {}): Promise<Con
 
   try {
     logger.debug('Launching browser');
+    // @ts-ignore
     browser = await puppeteer.launch(rest);
     const [firstPage] = await browser.pages();
     page = firstPage;

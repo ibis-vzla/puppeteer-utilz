@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-utilz",
-  "version": "2.0.1",
+  "version": "3.0.0-rc.1",
   "description": "Utility functions for puppeteer",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -36,7 +36,7 @@
   "devDependencies": {
     "@types/jest": "^24.0.24",
     "@types/node": "^12.12.21",
-    "@types/puppeteer": "^2.0.0",
+    "@types/puppeteer": "^3.0.2",
     "@types/signale": "^1.2.1",
     "install-peers-cli": "^2.2.0",
     "jest": "^25.3.0",
@@ -46,21 +46,7 @@
     "typescript": "^3.7.4"
   },
   "peerDependencies": {
-    "puppeteer": "^5.2.0"
-  },
-  "optionalDependencies": {
-    "puppeteer-extra-plugin-adblocker": "^2.11.1",
-    "puppeteer-extra-plugin-anonymize-ua": "^2.2.6",
-    "puppeteer-extra-plugin-block-resources": "^2.2.2",
-    "puppeteer-extra-plugin-click-and-wait": "^2.2.2",
-    "puppeteer-extra-plugin-devtools": "^2.2.6",
-    "puppeteer-extra-plugin-flash": "^2.2.2",
-    "puppeteer-extra-plugin-font-size": "^2.2.2",
-    "puppeteer-extra-plugin-recaptcha": "^3.1.8",
-    "puppeteer-extra-plugin-repl": "^2.2.2",
-    "puppeteer-extra-plugin-stealth": "^2.4.5",
-    "puppeteer-extra-plugin-user-data-dir": "^2.2.2",
-    "puppeteer-extra-plugin-user-preferences": "^2.2.2"
+    "puppeteer": "^5.3.1"
   },
   "dependencies": {
     "@types/async-retry": "^1.4.2",
@@ -69,7 +55,7 @@
     "chalk": "^3.0.0",
     "ms": "^2.1.2",
     "no-try": "^1.1.3",
-    "puppeteer-extra": "^3.1.9",
+    "puppeteer-extra": "^3.1.15",
     "signale": "^1.4.0"
   }
 }
