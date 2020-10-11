@@ -15,7 +15,7 @@ type TypeOptions = {
   selector: string;
   value: string;
   name: string;
-  censor: boolean;
+  censor?: boolean;
 };
 
 const type = async (window: Frame | Page, options: TypeOptions) => {
