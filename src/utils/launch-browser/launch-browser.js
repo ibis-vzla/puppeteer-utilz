@@ -1,10 +1,10 @@
-import puppeteer from "puppeteer-extra";
+import puppeteer from "puppeteer";
 
 import { noop, waitForNavigation } from "..";
 import { logger, time } from "../../internals";
 
-export const launchBrowser = async (startUrl, config) => {
-  const { plugins, loadConfig, ...rest } = config;
+export const launchBrowser = async (startUrl, config = {}) => {
+  const { loadConfig, ...rest } = config;
 
   let browser;
   let page;
@@ -13,12 +13,6 @@ export const launchBrowser = async (startUrl, config) => {
     timeout: time("30 seconds"),
     ...loadConfig,
   };
-
-  if (plugins && plugins.length) {
-    plugins.forEach((plugin) => {
-      puppeteer.use(plugin());
-    });
-  }
 
   try {
     logger.debug("Launching browser");

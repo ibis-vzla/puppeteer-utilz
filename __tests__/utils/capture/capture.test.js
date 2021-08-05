@@ -66,3 +66,7 @@ describe("with the imported capture module", () => {
     expect(fs.existsSync(path)).toBe(true);
   });
 });
+
+afterAll(() => {
+  fs.unlinkSync("./test.png");
+});
