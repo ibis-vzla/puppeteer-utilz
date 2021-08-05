@@ -27,3 +27,7 @@ describe("with the imported set-download-path module", () => {
     expect(fs.existsSync(downloadPath)).toBe(true);
   });
 });
+
+afterAll(() => {
+  fs.rmdirSync("./download-path-test", { recursive: true });
+});

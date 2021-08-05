@@ -1,3 +1,4 @@
+import fs from "fs";
 import puppeteer from "puppeteer";
 
 import { setDownloadPath, timeout, waitForDownload, click } from "@/utils";
@@ -50,4 +51,9 @@ describe("with the imported wait-for-download module", () => {
 
     expect(filename).toBe(false);
   });
+});
+
+afterAll(() => {
+  fs.rmdirSync("./1-test-folder", { recursive: true });
+  fs.rmdirSync("./2-test-folder", { recursive: true });
 });

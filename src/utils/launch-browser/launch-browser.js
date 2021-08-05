@@ -3,7 +3,7 @@ import puppeteer from "puppeteer-extra";
 import { noop, waitForNavigation } from "..";
 import { logger, time } from "../../internals";
 
-export const launchBrowser = async (startUrl, config) => {
+export const launchBrowser = async (startUrl, config = {}) => {
   const { plugins, loadConfig, ...rest } = config;
 
   let browser;
