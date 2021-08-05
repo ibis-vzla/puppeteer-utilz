@@ -5,4 +5,7 @@ module.exports = {
   },
   preset: "jest-puppeteer",
   testTimeout: 600000,
+  transform: {
+    "^.+\\.(t|j)sx?$": ["@swc/jest"],
+  },
 };
