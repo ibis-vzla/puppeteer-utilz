@@ -1,0 +1,5 @@
+{
+  "importOrder": ["^@/(.*)$", "^[./]"],
+  "importOrderSeparation": true,
+  "experimentalBabelParserPluginsList": ["jsx"]
+}

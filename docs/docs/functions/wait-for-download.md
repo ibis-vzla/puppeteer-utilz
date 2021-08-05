@@ -6,7 +6,6 @@ title: waitForDownload
 
 Waits for a download to finish. aka, the document is available in the system's fs.
 
-
 ### Parameters
 
 - `path`: `string`

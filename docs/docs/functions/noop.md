@@ -9,7 +9,7 @@ Does nothing. 🤷🏻‍♂️
 ### Usage example
 
 ```js
-import { noop } from 'puppeteer-utilz';
+import { noop } from "puppeteer-utilz";
 
 (() => {
   noop();

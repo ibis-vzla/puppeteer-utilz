@@ -1,7 +1,7 @@
 module.exports = {
   moduleNameMapper: {
-    'src/(.*)': '<rootDir>/src/$1',
+    "^@/(.*)$": "<rootDir>/src/$1",
   },
-  preset: './jest.preset',
+  preset: "./jest.preset",
   testTimeout: 600000,
 };

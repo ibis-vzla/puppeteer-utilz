@@ -14,16 +14,14 @@ Waits for the given URL to settle in the browser.
 ### Usage example
 
 ```js
-import puppeteer from 'puppeteer';
-import { waitForURL } from 'puppeteer-utilz';
+import puppeteer from "puppeteer";
+import { waitForURL } from "puppeteer-utilz";
 
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  page.goto('https://www.fb.com/');
-
-  await waitForURL(page, 'https://www.facebook.com/');
-
+  page.goto("https://www.fb.com/");
+  await waitForURL(page, "https://www.facebook.com/");
   browser.close();
 })();
 ```

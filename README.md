@@ -20,4 +20,3 @@ And for the yarn fans:
 `yarn add puppeteer-utilz --save`
 
 ## [Documentation](https://puppeteer-utilz.netlify.com/) 📃
-

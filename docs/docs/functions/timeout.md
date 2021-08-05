@@ -13,9 +13,10 @@ Returns an object with the timeout property.
 ### Usage example
 
 ```js
-import { timeout } from 'puppeteer-utilz';
+import { timeout } from "puppeteer-utilz";
 
 (() => {
-  console.log(timeout('30 seconds')); // { timeout: 30000 }
+  console.log(timeout("30 seconds"));  timeout: 30000 }
+})(
 })();
 ```
