@@ -19,16 +19,14 @@ This resolves when the page navigates to a new URL or reloads. It is useful for 
 ### Usage example
 
 ```js
-import puppeteer from 'puppeteer';
-import { timeout, waitForNavigation } from 'puppeteer-utilz';
+import puppeteer from "puppeteer";
+import { timeout, waitForNavigation } from "puppeteer-utilz";
 
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  page.goto('https://github.com/');
-
-  await waitForNavigation(page, timeout('1 minute'));
-
+  page.goto("https://github.com/");
+  await waitForNavigation(page, timeout("1 minute"));
   await browser.close();
 })();
 ```
