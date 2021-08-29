@@ -94,7 +94,7 @@ export const restoreSession = async (page, path) => {
   ]);
 };
 
-export const resetSession = (path) => {
+export const clearSession = (path) => {
   const { cookiesPath, localStoragePath, sessionStoragePath } =
     getDerivedSavedSessionPaths(path);
 
