@@ -23,3 +23,5 @@ export { waitForDownload } from "./wait-for-download/wait-for-download";
 export { waitForFrame } from "./wait-for-frame/wait-for-frame";
 export { waitForNavigation } from "./wait-for-navigation/wait-for-navigation";
 export { waitForURL } from "./wait-for-url/wait-for-url";
+export { resetSession, saveSession, restoreSession } from "./session/session";
+export { waitForNetwork0 } from "./wait-for-network-0/wait-for-network-0";
