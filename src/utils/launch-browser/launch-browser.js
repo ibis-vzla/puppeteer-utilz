@@ -4,7 +4,7 @@ import { noop, waitForNavigation } from "..";
 import { logger, time } from "../../internals";
 
 export const launchBrowser = async (startUrl, config = {}) => {
-  const { loadConfig, ...rest } = config;
+  const { loadConfig, method = "launch", ...rest } = config;
 
   let browser;
   let page;
@@ -16,7 +16,7 @@ export const launchBrowser = async (startUrl, config = {}) => {
 
   try {
     logger.debug("Launching browser");
-    browser = await puppeteer.launch(rest);
+    browser = await puppeteer[method](rest);
     const [firstPage] = await browser.pages();
     page = firstPage;
   } catch (error) {
