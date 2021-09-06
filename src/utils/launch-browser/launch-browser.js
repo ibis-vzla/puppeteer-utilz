@@ -1,7 +1,5 @@
-import puppeteer from "puppeteer";
-
 import { noop, waitForNavigation } from "..";
-import { logger, time } from "../../internals";
+import { logger, time, getPuppeteer } from "../../internals";
 
 export const launchBrowser = async (startUrl, config = {}) => {
   const { loadConfig, method = "launch", ...rest } = config;
@@ -16,6 +14,7 @@ export const launchBrowser = async (startUrl, config = {}) => {
 
   try {
     logger.debug("Launching browser");
+    const puppeteer = await getPuppeteer();
     browser = await puppeteer[method](rest);
     const [firstPage] = await browser.pages();
     page = firstPage;

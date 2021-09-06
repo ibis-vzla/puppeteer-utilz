@@ -13,7 +13,7 @@ export { delay } from "./delay/delay";
 export { disableLogger } from "./disable-logger/disable-logger";
 export { findElement } from "./find-element/find-element";
 export { getFrame, refreshFrame } from "./get-frame/get-frame";
-export { launchBrowser } from "./launch-browser/launch-browser";
+// export { launchBrowser } from "./launch-browser/launch-browser";
 export { noop } from "./noop/noop";
 export { retry } from "./retry/retry";
 export { setDownloadPath } from "./set-download-path/set-download-path";
