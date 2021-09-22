@@ -1,9 +1,8 @@
 {
   "name": "puppeteer-utilz",
-  "version": "4.0.4-rc.0",
+  "version": "4.0.4-rc.1",
   "description": "Utility functions for puppeteer",
   "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "files": [
     "lib/**/*"
   ],
@@ -39,7 +38,7 @@
     "@trivago/prettier-plugin-sort-imports": "2.0.2",
     "chokidar": "3.5.2",
     "eslint": "7.32.0",
-    "install-peers-cli": "^2.2.0",
+    "install-peers-cli": "2.2.0",
     "jest": "27.0.6",
     "jest-puppeteer": "5.0.4",
     "puppeteer": "*",
@@ -50,10 +49,10 @@
     "puppeteer-core": "*"
   },
   "dependencies": {
-    "async-retry": "^1.3.1",
-    "chalk": "^3.0.0",
-    "ms": "^2.1.2",
-    "no-try": "^1.1.3",
-    "signale": "^1.4.0"
+    "async-retry": "1.3.1",
+    "chalk": "3.0.0",
+    "ms": "2.1.2",
+    "no-try": "1.1.3",
+    "signale": "1.4.0"
   }
 }
