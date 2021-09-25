@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-utilz",
-  "version": "4.0.4-rc.1",
+  "version": "4.0.5",
   "description": "Utility functions for puppeteer",
   "main": "lib/index.js",
   "files": [
