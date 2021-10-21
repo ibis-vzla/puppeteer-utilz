@@ -3,7 +3,11 @@ import * as fs from "fs";
 const writeCookies = async (page, p) => {
   const client = await page.target().createCDPSession();
   const cookies = (await client.send("Network.getAllCookies"))["cookies"];
-  fs.writeFileSync(p, JSON.stringify(cookies));
+  try {
+    fs.writeFileSync(p, JSON.stringify(cookies));
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 const restoreCookies = async (page, p) => {
@@ -23,7 +27,11 @@ const writeLocalStorage = async (page, p) => {
     }
     return json;
   });
-  fs.writeFileSync(p, JSON.stringify(json));
+  try {
+    fs.writeFileSync(p, JSON.stringify(json));
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 const restoreLocalStorage = async (page, p) => {
@@ -43,7 +51,11 @@ const writeSessionStorage = async (page, p) => {
     }
     return json;
   });
-  fs.writeFileSync(p, JSON.stringify(json));
+  try {
+    fs.writeFileSync(p, JSON.stringify(json));
+  } catch (err) {
+    console.error(err);
+  }
 };
 
 const restoreSessionStorage = async (page, p) => {
@@ -54,7 +66,7 @@ const restoreSessionStorage = async (page, p) => {
   }, json);
 };
 
-const removeFilesInPaths = async (paths = []) => {
+const removeFilesInPaths = (paths = []) => {
   try {
     paths.forEach((p) => {
       fs.unlinkSync(p);
@@ -73,10 +85,13 @@ const getDerivedSavedSessionPaths = (path) => {
 };
 
 export const saveSession = async (page, path) => {
-  const { cookiesPath, localStoragePath, sessionStoragePath } =
-    getDerivedSavedSessionPaths(path);
+  const {
+    cookiesPath,
+    localStoragePath,
+    sessionStoragePath,
+  } = getDerivedSavedSessionPaths(path);
 
-  await Promise.all([
+  return Promise.all([
     writeCookies(page, cookiesPath),
     writeLocalStorage(page, localStoragePath),
     writeSessionStorage(page, sessionStoragePath),
@@ -84,10 +99,13 @@ export const saveSession = async (page, path) => {
 };
 
 export const restoreSession = async (page, path) => {
-  const { cookiesPath, localStoragePath, sessionStoragePath } =
-    getDerivedSavedSessionPaths(path);
+  const {
+    cookiesPath,
+    localStoragePath,
+    sessionStoragePath,
+  } = getDerivedSavedSessionPaths(path);
 
-  await Promise.all([
+  return Promise.all([
     restoreCookies(page, cookiesPath).catch(() => {}),
     restoreLocalStorage(page, localStoragePath).catch(() => {}),
     restoreSessionStorage(page, sessionStoragePath).catch(() => {}),
@@ -95,8 +113,11 @@ export const restoreSession = async (page, path) => {
 };
 
 export const clearSession = (path) => {
-  const { cookiesPath, localStoragePath, sessionStoragePath } =
-    getDerivedSavedSessionPaths(path);
+  const {
+    cookiesPath,
+    localStoragePath,
+    sessionStoragePath,
+  } = getDerivedSavedSessionPaths(path);
 
   removeFilesInPaths([cookiesPath, localStoragePath, sessionStoragePath]);
 };
