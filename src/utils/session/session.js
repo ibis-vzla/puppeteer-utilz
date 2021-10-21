@@ -5,9 +5,7 @@ const writeCookies = async (page, p) => {
   const cookies = (await client.send("Network.getAllCookies"))["cookies"];
   try {
     fs.writeFileSync(p, JSON.stringify(cookies));
-  } catch (err) {
-    console.error(err);
-  }
+  } catch (err) {}
 };
 
 const restoreCookies = async (page, p) => {
@@ -29,9 +27,7 @@ const writeLocalStorage = async (page, p) => {
   });
   try {
     fs.writeFileSync(p, JSON.stringify(json));
-  } catch (err) {
-    console.error(err);
-  }
+  } catch (err) {}
 };
 
 const restoreLocalStorage = async (page, p) => {
@@ -53,9 +49,7 @@ const writeSessionStorage = async (page, p) => {
   });
   try {
     fs.writeFileSync(p, JSON.stringify(json));
-  } catch (err) {
-    console.error(err);
-  }
+  } catch (err) {}
 };
 
 const restoreSessionStorage = async (page, p) => {
@@ -71,9 +65,7 @@ const removeFilesInPaths = (paths = []) => {
     paths.forEach((p) => {
       fs.unlinkSync(p);
     });
-  } catch (err) {
-    console.error(err);
-  }
+  } catch (err) {}
 };
 
 const getDerivedSavedSessionPaths = (path) => {
