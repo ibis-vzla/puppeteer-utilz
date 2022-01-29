@@ -61,11 +61,11 @@ const restoreSessionStorage = async (page, p) => {
 };
 
 const removeFilesInPaths = (paths = []) => {
-  try {
-    paths.forEach((p) => {
+  paths.forEach((p) => {
+    try {
       fs.unlinkSync(p);
-    });
-  } catch (err) {}
+    } catch (err) {}
+  });
 };
 
 const getDerivedSavedSessionPaths = (path) => {
@@ -81,6 +81,7 @@ export const saveSession = async (page, path) => {
     cookiesPath,
     localStoragePath,
     sessionStoragePath,
+    // TODO: cache storage
   } = getDerivedSavedSessionPaths(path);
 
   return Promise.all([

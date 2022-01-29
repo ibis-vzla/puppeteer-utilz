@@ -1,6 +1,6 @@
 {
   "name": "puppeteer-utilz",
-  "version": "4.0.7",
+  "version": "4.0.8",
   "description": "Utility functions for puppeteer",
   "main": "lib/index.js",
   "files": [
@@ -44,7 +44,7 @@
     "puppeteer": "*",
     "regenerator-runtime": "0.13.9"
   },
-  "peerDependencies": {
+  "optionalDependencies": {
     "puppeteer": "*",
     "puppeteer-core": "*"
   },
